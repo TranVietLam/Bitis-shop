@@ -1,0 +1,31 @@
+.header-menu-list {
+  position: absolute;
+  width: 270px;
+  height: 626px;
+  background: #fff;
+  border-radius: 20px;
+  left: 165px;
+  top: 90%;
+  box-shadow: 0 0 6px 0 rgb(0 0 0 / 15%);
+}
+
+.header-menu-list::before {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 30px;
+  top: -25px;
+  left: 0;
+}
+
+
+.menu-list-item:first-child {
+  border-radius: 20px 20px 0 0;
+}
+
+.menu-list-item {
+  height: calc(100% / 11);
+  padding: 0 14px;
+  display: flex;
+  align-items: center;
+}

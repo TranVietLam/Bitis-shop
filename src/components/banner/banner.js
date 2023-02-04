@@ -2,9 +2,8 @@ import React from "react";
 import { useState } from "react";
 import "./banner.css";
 import Carousel from "react-bootstrap/Carousel";
-import BannerImg1 from "../../Assets/images/banner/banner-1.jpg";
-import BannerImg2 from "../../Assets/images/banner/banner-2.jpg";
-import BannerImg3 from "../../Assets/images/banner/banner-3.jpg";
+import BannerImg1 from "../../Assets/images/banner/Banner1.png";
+import BannerImg2 from "../../Assets/images/banner/Banner2.png";
 
 const Banner = () => {
   const [index, setIndex] = useState(0);
@@ -20,7 +19,7 @@ const Banner = () => {
             <div className="banner-section">
               <img
                 className="d-block w-100 banner-img"
-                src={BannerImg2}
+                src={BannerImg1}
                 alt="Banner"
               />
             </div>
@@ -30,7 +29,7 @@ const Banner = () => {
             <div className="banner-section">
               <img
                 className="d-block w-100 banner-img"
-                src={BannerImg3}
+                src={BannerImg2}
                 alt="Banner"
               />
             </div>
