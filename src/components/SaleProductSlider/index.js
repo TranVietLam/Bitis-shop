@@ -3,7 +3,16 @@ import Slider from "react-slick";
 import "./style.css";
 import DataProductSale from "./../../DataProductSale/index";
 
+//redux
+import { useDispatch } from 'react-redux';
+import { onAddToCart } from './../../redux/actions/actions';
+import { Link } from 'react-router-dom';
+
 const SaleSlider = () => {
+  const dispatch = useDispatch();
+  const handleAddToCart = (infoProduct) => {
+      dispatch(onAddToCart(infoProduct));
+  }
   const settings = {
     dots: true,
     infinite: false,
@@ -76,14 +85,12 @@ const SaleSlider = () => {
                         {item.price}
                         <span className="ms-1">đ</span>
                       </span>
-                      <a
-                        href="/cart"
+                      <div
+                        onClick={() => {handleAddToCart(item)}}
                         className="product-btn-cart"
-                        target="_blank"
-                        rel="noopener noreferrer"
                       >
                         {" "}
-                      </a>
+                      </div>
                     </div>
                   </div>
                 </div>

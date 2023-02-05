@@ -19,7 +19,7 @@ const Header = () => {
   };
   window.addEventListener("scroll", changeNavbar);
 
-  // const cartAmount = useSelector((state) => state.cartStore.product.length)
+  const cartAmount = useSelector((state) => state.cartStore.product.length)
   return (
     <>
       <div className={navbar ? "fixed-top active" : "fixed-top"}>
@@ -166,11 +166,11 @@ const Header = () => {
             </div>
             <div className="header-right-item item-cart">
               <a href="/cart" className="icons icon-cart bi bi-cart3">
-                <span className="cart-count">0</span>
+                <span className="cart-count">{cartAmount}</span>
               </a>
-              <a href="/cart" className="cart">
+              <Link to="/cart" className="cart">
                 Giỏ hàng
-              </a>
+              </Link>
               {/* cart hover */}
               <div className="header-cart-hover"></div>
             </div>

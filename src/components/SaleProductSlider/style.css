@@ -22,8 +22,7 @@ a {
   overflow: hidden;
   border-radius: 15px;
   margin-bottom: 12px;
-  transition: all .4s ease-in-out;
-  transform: scale(1);
+  transition: all 1s ease-in-out;
 }
 
 .slick-prev:before,
@@ -114,6 +113,7 @@ a {
   position: absolute;
   top: 3px;
   right: 0;
+  cursor: pointer;
 }
 
 .product-btn-collection {
