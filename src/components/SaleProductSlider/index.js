@@ -46,34 +46,35 @@ const SaleSlider = () => {
     <>
       <Slider {...settings}>
         {DataProductSale.map((item, id) => (
-          <div key={id} className="container">
-            <div className="product-card">
-              <div className="product-item">
-                <a
-                  href="/"
-                  className="product-img"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img src={item.image} alt="products" />
-                  <span className="product-discount">{item.discount}</span>
-                </a>
-                <div className="product-text">
-                  <div className="d-flex align-items-center justify-content-between">
-                    <p className="product-code">Mã: {item.code}</p>
-                    <p className="product-status">Còn Hàng</p>
-                  </div>
-                  <a href="/" className="product-name">
-                    {item.name}
+          <div key={id}>
+            <div  className="container">
+              <div className="product-card">
+                <div className="product-item">
+                  <a
+                    href="/"
+                    className="product-img"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src={item.image} alt="products" />
+                    <span className="product-discount">{item.discount}</span>
                   </a>
+                  <div className="product-text">
+                    <div className="d-flex align-items-center justify-content-between">
+                      <p className="product-code">Mã: {item.code}</p>
+                      <p className="product-status">Còn Hàng</p>
+                    </div>
+                    <a href="/" className="product-name">
+                      {item.name}
+                    </a>
                     <div className="product-price-container">
                       <del className="product-old-price">
                         {item.oldprice}
-                        <span>đ</span>
+                        <span className="ms-1">đ</span>
                       </del>
                       <span className="product-price">
                         {item.price}
-                        <span>đ</span>
+                        <span className="ms-1">đ</span>
                       </span>
                       <a
                         href="/cart"
@@ -84,13 +85,22 @@ const SaleSlider = () => {
                         {" "}
                       </a>
                     </div>
-
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         ))}
       </Slider>
+      <a
+        href="/"
+        className="product-btn-collection"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Xem thêm
+        <span><i className="bi bi-arrow-right ms-2"></i></span>
+      </a>
     </>
   );
 };
