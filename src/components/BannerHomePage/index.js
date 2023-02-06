@@ -12,6 +12,7 @@ import BannerUnder1 from "../../Assets/images/banner/Banner-under1.png";
 import BannerUnder2 from "../../Assets/images/banner/Banner-under2.png";
 import BannerUnder3 from "../../Assets/images/banner/Banner-under3.png";
 import Menu from "../../components/MenuList";
+import ProductSection from './../ProductSection/index';
 
 
 const BannerHomePage = () => {

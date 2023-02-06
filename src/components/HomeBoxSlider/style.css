@@ -1,3 +1,9 @@
+.home-box-group {
+    margin: 20px 0;
+    background: #fff;
+    overflow: hidden;
+    border-radius: 20px;
+}
 .homebox-slider {
     margin: 20px 0;
     background: #fff;

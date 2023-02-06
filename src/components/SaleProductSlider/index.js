@@ -6,7 +6,7 @@ import DataProductSale from "./../../DataProductSale/index";
 //redux
 import { useDispatch } from 'react-redux';
 import { onAddToCart } from './../../redux/actions/actions';
-import { Link } from 'react-router-dom';
+
 
 const SaleSlider = () => {
   const dispatch = useDispatch();
@@ -21,9 +21,9 @@ const SaleSlider = () => {
     slidesToScroll: 1,
     initialSlide: 0,
     swipeToSlide: true,
-    // autoplay: true,
-    // autoplaySpeed: 2000,
-    // lazyLoad: true,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    lazyLoad: true,
     responsive: [
       {
         breakpoint: 1024,

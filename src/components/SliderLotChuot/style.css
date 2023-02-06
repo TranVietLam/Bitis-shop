@@ -1,0 +1,77 @@
+/* Slider Section */
+.slider-item {
+    background: #fff;
+    border: 15px;
+    padding: 11px 11px 20px;
+}
+
+.slider-item a:hover {
+    color: #29A07E;
+}
+
+.slider-item a {
+    display: block;
+    color: #000;
+}
+
+.slider-img {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    margin-bottom: 12px;
+    height: 295px;
+}
+
+.slider-code {
+    font-size: 12px;
+    line-height: 15px;
+    color: #777;
+    margin-bottom: 7px;
+}
+
+.slider-quantity {
+    font-size: 12px;
+    line-height: 15px;
+    margin-bottom: 12px;
+    color: green;
+}
+
+.slider-name {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 15px;
+    margin-top: 8px;
+    margin-bottom: 12px;
+    height: auto;
+    text-decoration: none;
+    text-overflow: ellipsis;
+}
+
+.slider-price-container {
+    height: 42px;
+    position: relative;
+}
+
+.slider-price {
+    color: #29A07E;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 23px;
+    display: block;
+}
+
+.slider-text p {
+    margin-bottom: 0;
+}
+
+.slider-btn-cart {
+    background: url(../../Assets/images/bg-cart/cart.png) no-repeat center;
+    background-size: 20px;
+    background-color: #cfeac1;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    position: absolute;
+    top: 3px;
+    right: 0;
+}

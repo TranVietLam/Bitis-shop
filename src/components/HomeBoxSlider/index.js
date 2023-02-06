@@ -1,10 +1,12 @@
 import React from "react";
 import "./style.css";
 
+import SliderLotChuot from "./../SliderLotChuot/index";
+
 const HomeBoxSlider = () => {
   return (
     <>
-      <div className="container">
+      <div className="container home-box-group">
         <div className="homebox-slider">
           <div className="homebox-title-group">
             <h2 className="title">Lót Chuột</h2>
@@ -30,6 +32,9 @@ const HomeBoxSlider = () => {
               </button>
             </div>
           </div>
+        </div>
+        <div className="slider-container">
+          <SliderLotChuot />
         </div>
       </div>
     </>
