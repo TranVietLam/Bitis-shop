@@ -1,0 +1,43 @@
+.under-navbar-container {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 100;
+  background: #fff;
+  box-shadow: 0 1px 8px rgb(0 0 0 / 30%);
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.under-nav-item {
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 20px;
+  width: calc(100% / 4);
+  padding: 12px 0 0;
+  text-decoration: none;
+  color: #666;
+}
+
+.under-nav-item:hover {
+  color: #29a07e;
+}
+
+i.under-nav-icon {
+    font-size: 16px;
+    margin: auto;
+}
+
+@media (min-width: 360px) and (max-width: 480px) {
+    .under-nav-item {
+        font-size: 10px;
+        padding: 10px 0 0;
+    }
+
+    i.under-nav-icon {
+        font-size: 17px;
+    }
+}

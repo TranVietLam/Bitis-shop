@@ -63,7 +63,7 @@ const SliderLotChuot = () => {
             >
               <img src={item.image} alt="images" />
             </a>
-            <p className="slider-text">
+            <div className="slider-text">
               <div className="d-flex align-item-center justify-content-between">
                 <p className="slider-code">Mã : {item.code}</p>
                 <p className="slider-quantity">{item.quantity}</p>
@@ -84,7 +84,7 @@ const SliderLotChuot = () => {
                   }}
                 ></button>
               </div>
-            </p>
+            </div>
           </div>
         ))}
       </Slider>

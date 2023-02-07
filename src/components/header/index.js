@@ -6,6 +6,7 @@ import { Link, NavLink } from "react-router-dom";
 
 import { useSelector } from "react-redux";
 import Menu from "./../MenuList/index";
+import NavbarTablet from "./../NavbarTablet/index";
 
 const Header = () => {
   //Navbar Animation
@@ -19,7 +20,7 @@ const Header = () => {
   };
   window.addEventListener("scroll", changeNavbar);
 
-  const cartAmount = useSelector((state) => state.cartStore.product.length)
+  const cartAmount = useSelector((state) => state.cartStore.product.length);
   return (
     <>
       <div className={navbar ? "fixed-top active" : "fixed-top"}>
@@ -177,6 +178,8 @@ const Header = () => {
           </div>
         </nav>
       </div>
+        <NavbarTablet />
+
     </>
   );
 };
