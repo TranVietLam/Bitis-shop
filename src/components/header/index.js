@@ -114,74 +114,83 @@ const Header = () => {
             </div>
           </div>
         </div>
-        <nav className="navbar py-lg-0 px-lg-5">
-          <Link to="/home" className="navbar-brand ms-lg-4 ms-lg-0">
-            <div className="logo-store m-0">
-              <img src={Logo} alt="LogoStore" />
+        {/* Under Header */}
+        <div className="container under-header-container">
+          <div className="header-middle-group d-flex align-items-center">
+            <Link href="/home" className="logo-store">
+              <img src={Logo} alt="Logo" className="logo" />
+            </Link>
+
+            <div className="header-menu-group">
+              <p className="header-menu-title">
+                <i className="bi bi-list-ul icon-list" />
+                Danh Mục
+              </p>
+              <Menu />
             </div>
-          </Link>
 
-          <div className="header-menu-group">
-            <p className="header-menu-title">
-              <i className="bi bi-list-ul icon-list" />
-              Danh Mục
-            </p>
-            <Menu />
-          </div>
-
-          <div className="header-search-group">
-            <form
-              method="get"
-              action="/tim"
-              name="search"
-              className="search-input-group bg-white position-relative"
-            >
-              <button type="submit" className="bi bi-search icon-search" />
-              <input
-                type="text"
-                placeholder="Bạn cần tìm gì?"
-                autoComplete="off"
-                className="text-search"
-              />
-            </form>
-          </div>
-
-          <div className="header-right-group">
-            <div className="header-right-item">
-              <i className="icon-phone ringing me-3 bi bi-telephone-forward" />
-              <a href="tel:0879259755" className="text font-700">
-                <span className="font-400 me-2">Hotline</span>
-                <b>0879.259.755</b>
-              </a>
-            </div>
-            <div className="header-right-item">
-              <i className="icons bi bi-lightning" />
-              <a
-                href="https://www.messenger.com/t/100044646572165"
-                target="_blank"
-                className="advise-mess"
-                rel="noopener noreferrer"
+            <div className="header-search-group">
+              <form
+                method="get"
+                action="/tim"
+                name="search"
+                className="search-input-group bg-white position-relative"
               >
-                Tư vấn trực tiếp
-              </a>
+                <button type="submit" className="bi bi-search icon-search" />
+                <input
+                  type="text"
+                  placeholder="Bạn cần tìm gì?"
+                  autoComplete="off"
+                  className="text-search"
+                />
+              </form>
             </div>
-            <div className="header-right-item item-cart">
-              <a href="/cart" className="icons icon-cart bi bi-cart3">
-                <span className="cart-count">{cartAmount}</span>
-              </a>
-              <Link to="/cart" className="cart">
-                Giỏ hàng
-              </Link>
-              {/* cart hover */}
-              <div className="header-cart-hover"></div>
+
+            <div className="header-right-group">
+              <div className="header-right-item">
+                <i className="icon-phone ringing me-3 bi bi-telephone-forward" />
+                <a href="tel:0879259755" className="text font-700">
+                  <div className="font-400 me-2 text-black">Hotline</div>
+                  <b>0879.259.755</b>
+                </a>
+              </div>
+              <div className="header-right-item">
+                <i className="icons bi bi-lightning" />
+                <a
+                  href="https://www.messenger.com/t/100044646572165"
+                  target="_blank"
+                  className="advise-mess"
+                  rel="noopener noreferrer"
+                >
+                  Tư vấn trực tiếp
+                </a>
+              </div>
+              <div className="header-right-item item-cart">
+                <a href="/cart" className="icons icon-cart bi bi-cart3">
+                  <span className="cart-count">{cartAmount}</span>
+                </a>
+                <Link to="/cart" className="cart">
+                  Giỏ hàng
+                </Link>
+                {/* cart hover */}
+                <div className="header-cart-hover"></div>
+              </div>
             </div>
           </div>
-        </nav>
+        </div>
       </div>
-        <NavbarTablet />
-
+      <NavbarTablet />
     </>
   );
 };
 
 export default Header;
+
+// <div className="navbar py-lg-0 px-lg-0">
+// <Link to="/home" className="navbar-brand ms-lg-4 ms-lg-0">
+//   <div className="logo-store m-0">
+//     <img src={Logo} alt="LogoStore" />
+//   </div>
+// </Link>
+
+// </div>

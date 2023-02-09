@@ -27,17 +27,24 @@
 }
 
 i.under-nav-icon {
-    font-size: 16px;
-    margin: auto;
+  font-size: 16px;
+  margin: auto;
 }
 
 @media (min-width: 360px) and (max-width: 480px) {
-    .under-nav-item {
-        font-size: 10px;
-        padding: 10px 0 0;
-    }
+  .under-nav-item {
+    font-size: 10px;
+    padding: 10px 0 0;
+  }
 
-    i.under-nav-icon {
-        font-size: 17px;
-    }
+  i.under-nav-icon {
+    font-size: 17px;
+  }
 }
+
+@media (min-width: 1024px) and (max-width: 2560px) {
+  .under-navbar-container {
+    display: none;
+  }
+}
+
