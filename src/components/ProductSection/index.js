@@ -5,7 +5,7 @@ import "./style.css";
 const ProductSection = () => {
   return (
     <>
-      <div className="container home-collection-group">
+      <div className="home-collection-group">
         <div className="box-title-group">
             <a href="/" target="_blank" rel="noopener noreferrer">XẢ LỖ CUỐI NĂM - SIÊU SALE ĂN MỪNG 200.000 LIKE FACEBOOK</a>
             <a href="/" target="_blank" rel="noopener noreferrer">CHUỘT GAMING</a>

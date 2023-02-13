@@ -1,13 +1,10 @@
 
 
 .banner-img {
-    height: 431px;
+    height: auto;
 }
 
 @media (max-width: 991.98px){
-    .banner-section {
-        margin-top: 45px;
-    }
 
     .banner-img {
         height: 220px;

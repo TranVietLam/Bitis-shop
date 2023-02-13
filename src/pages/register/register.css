@@ -1,0 +1,134 @@
+/* header */
+.register-title {
+  width: 100%;
+  float: left;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.box-register-content-left {
+  width: 780px;
+  margin: auto;
+  padding: 0 83px 0px 50px;
+}
+
+/* container */
+.box-register {
+  display: flex;
+  flex-direction: column;
+  max-height: 100%;
+  padding: 20px 10px;
+}
+
+/* form */
+
+form {
+  display: block;
+  margin-top: 0em;
+}
+
+.form-group {
+  width: 100%;
+  float: left;
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  width: 132px;
+  float: left;
+  font-size: 14px;
+  line-height: 35px;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* input */
+
+.sex-input {
+  display: inline-block;
+  margin-right: 5px;
+  position: relative;
+  top: 2px;
+}
+
+.female {
+  margin-left: 20px;
+}
+
+.label-for {
+  width: calc(100% - 132px);
+  float: right;
+  line-height: 35px;
+}
+
+.inputText {
+  width: 100%;
+  float: left;
+  padding: 0 10px;
+  height: 35px;
+  line-height: 35px;
+  border-radius: 3px;
+  border: 1px solid #acacac;
+  background: #faf9f9;
+}
+
+.submit-register {
+  width: 132px;
+  float: left;
+  text-align: center;
+  line-height: 37px;
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #fff;
+  background: #29a07e;
+  border-radius: 3px;
+  border: none;
+}
+
+/* select */
+.label-for select {
+  width: 100%;
+  float: left;
+  padding: 0px 10px;
+  height: 35px;
+  line-height: 35px;
+  border-radius: 3px;
+  border: solid 1px #acacac;
+  background: #faf9f9;
+}
+
+.select-birthday,
+.select-month {
+  width: 100px;
+  float: left;
+  margin-right: 10px;
+  padding: 0px 10px;
+  height: 35px;
+  line-height: 35px;
+  border-radius: 3px;
+  border: solid 1px #acacac;
+  background: #faf9f9;
+}
+
+.select-year {
+  width: 100px;
+  float: left;
+  padding: 0px 10px;
+  height: 35px;
+  line-height: 35px;
+  border-radius: 3px;
+  border: solid 1px #acacac;
+  background: #faf9f9;
+}
+
+/* responsive */
+
+@media (min-width: 320px) and (max-width: 425px) {
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+}

@@ -5,7 +5,7 @@ import DataTrending from "./../../DataTrending/DataTrending";
 const TrendingProduct = () => {
   return (
     <>
-      <div className="container mt-4">
+      <div className="mt-4">
         <div className="home-trending-group">
           <p className="box-title">XU HƯỚNG MUA SẮM</p>
           <div className="d-flex">

@@ -1,7 +1,7 @@
 .header-menu-list {
   position: absolute;
   width: 270px;
-  height: 626px;
+  height: 100%;
   background: #fff;
   border-radius: 20px;
   left: 165px;

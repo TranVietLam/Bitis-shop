@@ -8,11 +8,12 @@ import HomeBoxSlider from "../../components/HomeBoxSlider";
 const Home = () => {
   return (
     <>
+      <div className="container">
         <BannerHomePage />
         <ProductSection />
         <TrendingProduct />
         <HomeBoxSlider />
-
+      </div>
     </>
   );
 };

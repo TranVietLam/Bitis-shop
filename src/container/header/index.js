@@ -5,8 +5,8 @@ import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 
 import { useSelector } from "react-redux";
-import Menu from "./../MenuList/index";
-import NavbarTablet from "./../NavbarTablet/index";
+import Menu from "./../../components/MenuList/index";
+import NavbarTablet from "./../../components/NavbarTablet/index";
 
 const Header = () => {
   //Navbar Animation
@@ -104,22 +104,22 @@ const Header = () => {
           <div className="col-lg-6 px-5 text-end">
             <div className="header-right">
               <i className="bi bi-person-circle"></i>
-              <Link to="/register" className="user-section">
+              <NavLink to="/register" className="user-section">
                 Đăng Ký
-              </Link>
+              </NavLink>
               <span className="ms-2 me-2">/</span>
-              <Link to="/login" className="user-section">
+              <NavLink to="/login" className="user-section">
                 Đăng Nhập
-              </Link>
+              </NavLink>
             </div>
           </div>
         </div>
         {/* Under Header */}
         <div className="container under-header-container">
           <div className="header-middle-group d-flex align-items-center">
-            <Link href="/home" className="logo-store">
+            <NavLink to="/home" className="logo-store">
               <img src={Logo} alt="Logo" className="logo" />
-            </Link>
+            </NavLink>
 
             <div className="header-menu-group">
               <p className="header-menu-title">
@@ -169,9 +169,9 @@ const Header = () => {
                 <a href="/cart" className="icons icon-cart bi bi-cart3">
                   <span className="cart-count">{cartAmount}</span>
                 </a>
-                <Link to="/cart" className="cart">
+                <NavLink to="/cart" className="cart">
                   Giỏ hàng
-                </Link>
+                </NavLink>
                 {/* cart hover */}
                 <div className="header-cart-hover"></div>
               </div>
@@ -185,12 +185,3 @@ const Header = () => {
 };
 
 export default Header;
-
-// <div className="navbar py-lg-0 px-lg-0">
-// <Link to="/home" className="navbar-brand ms-lg-4 ms-lg-0">
-//   <div className="logo-store m-0">
-//     <img src={Logo} alt="LogoStore" />
-//   </div>
-// </Link>
-
-// </div>
