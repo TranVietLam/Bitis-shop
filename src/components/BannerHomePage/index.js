@@ -21,9 +21,51 @@ const BannerHomePage = () => {
           <Menu />
         </div>
         <div className="home-container">
-          <div className="d-flex">
+          <div className="home-container-group d-flex">
             <div className="home-banner-group">
               <Banner />
+            </div>
+            <div className="home-pro-cat-group">
+              <a href="/">
+                <span className="cat-thumb lot-chuot"></span>
+                <span className="cat-title">LÓT CHUỘT</span>
+              </a>
+              <a href="/">
+                <span className="cat-thumb gaming-gear"></span>
+                <span className="cat-title">GAMING GEAR</span>
+              </a>
+              <a href="/">
+                <span className="cat-thumb phu-kien"></span>
+                <span className="cat-title">PHỤ KIỆN MÁY TÍNH</span>
+              </a>
+              <a href="/">
+                <span className="cat-thumb mo-hinh"></span>
+                <span className="cat-title">MÔ HÌNH</span>
+              </a>
+              <a href="/">
+                <span className="cat-thumb trang-tri mr-0"></span>
+                <span className="cat-title">PHỤ KIỆN TRANG TRÍ</span>
+              </a>
+              <a href="/">
+                <span className="cat-thumb loa-micro"></span>
+                <span className="cat-title">LOA, MICRO, WEBCAM</span>
+              </a>
+              <a href="/">
+                <span className="cat-thumb ghe-gaming"></span>
+                <span className="cat-title">GHẾ GAMING</span>
+              </a>
+              <a href="/">
+                <span className="cat-thumb ban-gaming"></span>
+                <span className="cat-title">BÀN GAMING</span>
+              </a>
+              <a href="/">
+                <span className="cat-thumb usb"></span>
+                <span className="cat-title">USB, BỘ CHIA TÍN HIỆU</span>
+              </a>
+              <a href="/">
+                <span className="cat-thumb tan-nhiet"></span>
+                <span className="cat-title">TẢN NHIÊT, COOLING</span>
+              </a>
             </div>
             <div className="home-right-group">
               <a

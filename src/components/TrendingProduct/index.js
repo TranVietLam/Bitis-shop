@@ -8,7 +8,7 @@ const TrendingProduct = () => {
       <div className="mt-4">
         <div className="home-trending-group">
           <p className="box-title">XU HƯỚNG MUA SẮM</p>
-          <div className="d-flex">
+          <div className="box-title-slider">
             {DataTrending.map((item, id) => (
               <a key={id} href="/" className="item">
                 <img src={item.image} alt="images" className="trending-img" />

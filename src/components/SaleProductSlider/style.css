@@ -81,7 +81,7 @@ a {
 
 .product-name a {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
 }
 
 .product-price-container {

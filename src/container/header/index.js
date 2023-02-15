@@ -8,7 +8,7 @@ import { useSelector } from "react-redux";
 import Menu from "./../../components/MenuList/index";
 import NavbarTablet from "./../../components/NavbarTablet/index";
 
-const Header = () => {
+const Header = ({ item }) => {
   //Navbar Animation
   const [navbar, setNavbar] = useState(false);
   const changeNavbar = () => {
@@ -173,7 +173,45 @@ const Header = () => {
                   Giỏ hàng
                 </NavLink>
                 {/* cart hover */}
-                <div className="header-cart-hover"></div>
+                <div className="header-cart-hover">
+                  <div className="cart-items-holder">
+                    <div className="cart-item">
+                      <Link to="/cart" className="cart-img">
+                        <img
+                          src="https://lacdau.com/media/product/75-1389-cee443f13b710b757de6b494265fc813.jpg"
+                          alt="images"
+                        />
+                      </Link>
+                      <div className="cart-text">
+                        <Link to="cart" className="d-block font-700 cart-name">
+                          {" "}
+                          BỘ KEYCAP AKKO 9009 PBT SUBLIMATION
+                        </Link>
+                        <p className="m-0 d-flex justify-content-between">
+                          <b>x1</b>
+                          <b className="text-danger fw-semibold fs-6">390.000đ</b>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="cart-price-holder">
+                    <p className="text-secondary font-400 m-0 text-end">
+                      Tổng tiền hàng
+                      <span className="text-danger">
+                        (
+                        <span className="cart-counts text-danger me-1">1</span>
+                        sản phẩm):
+                      </span>
+                      <span className="text-danger text-18 fw-semibold mx-2 fs-5">
+                        390.000đ
+                      </span>
+                    </p>
+                    <button className="d-block text-center text-white btn-goCart">
+                      THANH TOÁN NGAY
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

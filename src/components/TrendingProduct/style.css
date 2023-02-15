@@ -1,5 +1,5 @@
 .green {
-    color: #29a07e;
+  color: #29a07e;
 }
 .home-trending-group {
   background: linear-gradient(270deg, #ffc34e 2.54%, #ff8b49 86.96%);
@@ -8,8 +8,8 @@
 }
 
 .home-trending-group img {
-    display: block;
-    margin: auto;
+  display: block;
+  margin: auto;
 }
 
 .box-title {
@@ -22,50 +22,69 @@
   margin-bottom: 16px;
 }
 
+.box-title-slider {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+
 .item {
-    margin: 0 12px 12px 0;
-    background: #FFF;
-    border-radius: 15px;
-    width: calc(100% / 4 - 9px);
-    overflow: hidden;
-    padding: 12px 12px 17px;
-    text-decoration: none;
+  margin: 0 12px 12px 0;
+  background: #fff;
+  border-radius: 15px;
+  width: calc(100% / 4 - 9px);
+  overflow: hidden;
+  padding: 12px 12px 17px;
+  text-decoration: none;
 }
 
 .item:hover .icon-arrow {
-    box-shadow: 0 0 5px 0 rgb(0 0 0 / 30%);
+  box-shadow: 0 0 5px 0 rgb(0 0 0 / 30%);
 }
 
 .trending-img {
-    width: 350px;
-    height: 155px;
+  width: 350px;
+  height: 155px;
 }
 
 .trending-card-text {
-    color: #000;
-    margin: 20px 0 0;
-    position: relative;
+  color: #000;
+  margin: 20px 0 0;
+  position: relative;
 }
 
 .trending-card-text span {
-    line-height: 20px;
-    margin-bottom: 5px;
-    display: block;
+  line-height: 20px;
+  margin-bottom: 5px;
+  display: block;
 }
 
 .trending-sale {
-    font-size: 14px;
+  font-size: 14px;
 }
 
 .icon-arrow {
-    position: absolute;
-    top: 3px;
-    right: 0;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: url(../../Assets/images/arrowSVG/icon-next.png) no-repeat center;
-    background-size: 10px 20px;
-    background-color: #F5F5F5;
-    transition: .2s all;
+  position: absolute;
+  top: 3px;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: url(../../Assets/images/arrowSVG/icon-next.png) no-repeat center;
+  background-size: 10px 20px;
+  background-color: #f5f5f5;
+  transition: 0.2s all;
+}
+
+@media (min-width: 320px) and (max-width: 425px) {
+  .box-title-slider {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .item {
+    width: calc(100% / 2 - 25px);
+    padding: 10px 10px 15px;
+    margin: 0 10px 10px 0;
+  }
 }
