@@ -43,8 +43,8 @@
 }
 
 .trending-img {
-  width: 350px;
-  height: 155px;
+  width: 100%;
+  height: auto;
 }
 
 .trending-card-text {
@@ -76,15 +76,18 @@
   transition: 0.2s all;
 }
 
-@media (min-width: 320px) and (max-width: 425px) {
+@media (min-width: 320px) and (max-width: 426px) {
   .box-title-slider {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
   }
 
   .item {
-    width: calc(100% / 2 - 25px);
+    width: calc(100% / 2 - 10px);
     padding: 10px 10px 15px;
     margin: 0 10px 10px 0;
   }
+
+
 }

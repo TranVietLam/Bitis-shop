@@ -41,7 +41,7 @@ a {
   text-align: center;
   color: #fff;
   font-weight: 700;
-  background: url(../../Assets/images/bg-discount/bg-discount.png) no-repeat
+  background: url(../../../Assets/images/bg-discount/bg-discount.png) no-repeat
     center;
   background-size: contain;
 }
@@ -104,7 +104,7 @@ a {
 }
 
 .product-btn-cart {
-  background: url(../../Assets/images/bg-cart/cart.png) no-repeat center;
+  background: url(../../../Assets/images/bg-cart/cart.png) no-repeat center;
   background-size: 20px;
   background-color: #cfeac1;
   width: 34px;

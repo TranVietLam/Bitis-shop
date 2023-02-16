@@ -1,11 +1,11 @@
 import React from "react";
 import "./style.css";
 import Slider from "react-slick";
-import DataLotChuot from "./../../DataLotChuot/index";
+import DataLotChuot from "../../../DataLotChuot/index";
 
 //redux
 import { useDispatch } from "react-redux";
-import { onAddToCart } from "../../redux/actions/actions";
+import { onAddToCart } from "../../../redux/actions/actions";
 
 const SliderLotChuot = () => {
   const dispatch = useDispatch();
@@ -44,7 +44,7 @@ const SliderLotChuot = () => {
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
           slidesToScroll: 1,
         },
       },

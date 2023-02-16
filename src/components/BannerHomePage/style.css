@@ -12,8 +12,8 @@
 }
 
 .home-left-group .header-menu-list {
-  position: unset ;
-  display: block ;
+  position: unset;
+  display: block;
 }
 
 .home-banner-group {
@@ -49,7 +49,7 @@
 }
 
 .home-under-item {
-    width: 330px;
+  width: 330px;
 }
 
 .home-under-item img {
@@ -58,7 +58,110 @@
   border-radius: 20px;
 }
 
+/* home pro cat group */
+.home-pro-cat-group a {
+  text-decoration: none;
+  display: block;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 12px;
+  color: #000;
+  text-align: center;
+  margin: 5px 5px 5px 5px;
+  border: 1px solid #cfeac1;
+  border-radius: 5px;
+  width: calc(100% / 5 - 16px);
+  padding: 6px 3px;
+}
 
+.cat-thumb {
+  display: block;
+  width: 24px;
+  height: 24px;
+  margin: auto auto 12px;
+}
+
+/* cat-thumb images */
+.home-pro-cat-group .lot-chuot {
+  background: url(../../Assets/images/icon-img/lot-chuot.png) no-repeat center;
+  background-size: contain;
+}
+
+.home-pro-cat-group .gaming-gear {
+  background: url(../../Assets/images/icon-img/gaming-gear.png) no-repeat center;
+  background-size: contain;
+}
+
+.home-pro-cat-group .phu-kien {
+  background: url(../../Assets/images/icon-img/phu-kien.png) no-repeat center;
+  background-size: contain;
+}
+
+.home-pro-cat-group .mo-hinh {
+  background: url(../../Assets/images/icon-img/mo-hinh.png) no-repeat center;
+  background-size: contain;
+}
+
+.home-pro-cat-group .trang-tri {
+  background: url(../../Assets/images/icon-img/trang-tri.png) no-repeat center;
+  background-size: contain;
+}
+
+.home-pro-cat-group .loa-micro {
+  background: url(../../Assets/images/icon-img/loa-micro.png) no-repeat center;
+  background-size: contain;
+}
+
+.home-pro-cat-group .ghe-gaming {
+  background: url(../../Assets/images/icon-img/ghe-gaming.png) no-repeat center;
+  background-size: contain;
+}
+
+.home-pro-cat-group .ban-gaming {
+  background: url(../../Assets/images/icon-img/ban-gaming.png) no-repeat center;
+  background-size: contain;
+}
+
+.home-pro-cat-group .usb {
+  background: url(../../Assets/images/icon-img/usb.png) no-repeat center;
+  background-size: contain;
+}
+
+.home-pro-cat-group .tan-nhiet {
+  background: url(../../Assets/images/icon-img/tan-nhiet.png) no-repeat center;
+  background-size: contain;
+}
+/* tablet */
+@media (min-width: 427px) and (max-width: 769px) {
+  .homepage-container {
+    min-height: 100%;
+    margin-top: 70px;
+  }
+  .home-left-group,
+  .home-right-group,
+  .home-under-group {
+    display: none;
+  }
+
+  .home-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  .home-container-group {
+    flex-wrap: wrap;
+  }
+
+  .home-pro-cat-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+/* mobile */
 @media (min-width: 320px) and (max-width: 426px) {
   .homepage-container {
     justify-content: center;
@@ -86,80 +189,7 @@
     margin-bottom: 10px;
   }
 
-  .home-pro-cat-group a {
-    text-decoration: none;
-    display: block;
-    font-weight: 500;
-    font-size: 10px;
-    line-height: 12px;
-    color: #000;
-    text-align: center;
-    margin: 5px 5px 5px 5px;
-    border: 1px solid #cfeac1;
-    border-radius: 5px;
-    width: calc(100% / 5 - 16px);
-    padding: 6px 3px;
-  }
-
-  .cat-thumb {
-    display: block;
-    width: 24px;
-    height: 24px;
-    margin: auto auto 12px;
-  }
-
-  /* cat-thumb images */
-  .home-pro-cat-group .lot-chuot {
-    background: url(../../Assets/images/icon-img/lot-chuot.png) no-repeat center;
-    background-size: contain;
-  }
-
-  .home-pro-cat-group .gaming-gear {
-    background: url(../../Assets/images/icon-img/gaming-gear.png) no-repeat center;
-    background-size: contain;
-  }
-
-  .home-pro-cat-group .phu-kien {
-    background: url(../../Assets/images/icon-img/phu-kien.png) no-repeat center;
-    background-size: contain;
-  }
-
-  .home-pro-cat-group .mo-hinh {
-    background: url(../../Assets/images/icon-img/mo-hinh.png) no-repeat center;
-    background-size: contain;
-  }
-
-  .home-pro-cat-group .trang-tri {
-    background: url(../../Assets/images/icon-img/trang-tri.png) no-repeat center;
-    background-size: contain;
-  }
-
-  .home-pro-cat-group .loa-micro {
-    background: url(../../Assets/images/icon-img/loa-micro.png) no-repeat center;
-    background-size: contain;
-  }
-
-  .home-pro-cat-group .ghe-gaming {
-    background: url(../../Assets/images/icon-img/ghe-gaming.png) no-repeat center;
-    background-size: contain;
-  }
-
-  .home-pro-cat-group .ban-gaming {
-    background: url(../../Assets/images/icon-img/ban-gaming.png) no-repeat center;
-    background-size: contain;
-  }
-
-  .home-pro-cat-group .usb {
-    background: url(../../Assets/images/icon-img/usb.png) no-repeat center;
-    background-size: contain;
-  }
-
-  .home-pro-cat-group .tan-nhiet {
-    background: url(../../Assets/images/icon-img/tan-nhiet.png) no-repeat center;
-    background-size: contain;
-  }
-
-  .home-left-group .header-menu-list{
+  .home-left-group .header-menu-list {
     display: none;
   }
 
@@ -174,7 +204,18 @@
   .home-container {
     width: 100%;
   }
+}
 
+/* /* latop large screen */
+@media (min-width: 769px) and (max-width: 1025px) { 
+  .homepage-container {
+    min-height: 100%;
+  }
+  .home-under-item img {
+    width: 97%;
+  }
 
-
+  .home-container {
+    width: calc(100% - 200px);
+  }
 }

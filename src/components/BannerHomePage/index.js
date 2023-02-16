@@ -1,5 +1,5 @@
 import React from "react";
-import Banner from "./../../components/banner/banner";
+import Banner from "../../components/BannerHomePage/banner/banner";
 import "./style.css";
 
 // Banner Right
@@ -16,7 +16,7 @@ import Menu from "../../components/MenuList";
 const BannerHomePage = () => {
   return (
     <>
-      <div className="homepage-container d-flex">
+      <div className="homepage-container d-flex justify-content-center">
         <div className="home-left-group">
           <Menu />
         </div>

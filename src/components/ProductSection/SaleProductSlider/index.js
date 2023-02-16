@@ -1,11 +1,11 @@
 import React from "react";
 import Slider from "react-slick";
 import "./style.css";
-import DataProductSale from "./../../DataProductSale/index";
+import DataProductSale from "../../../DataProductSale/index";
 
 //redux
 import { useDispatch } from 'react-redux';
-import { onAddToCart } from './../../redux/actions/actions';
+import { onAddToCart } from '../../../redux/actions/actions';
 
 
 const SaleSlider = () => {
@@ -45,7 +45,7 @@ const SaleSlider = () => {
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
           slidesToScroll: 1,
         },
       },
