@@ -344,8 +344,8 @@ a.text-hotline {
   text-align: center;
   font-style: normal;
   position: absolute;
-  top: 9px;
-  right: 90px;
+  top: 7px;
+  right: 115px;
   font-size: 16px;
 }
 /* Cart holder */
@@ -674,7 +674,7 @@ a.cart {
 }
 
 /* latop large screen */
-@media (min-width: 769px) and (max-width: 1025px) {
+@media (min-width: 769px) and (max-width: 1024px) {
   /* under header */
   .under-header-container {
     display: flex;
@@ -695,7 +695,7 @@ a.cart {
 
   .header-right-item span.cart-count {
     top: 7;
-    right: 115px;
+    right: 90px;
   }
 
   .header-right-item.item-cart {

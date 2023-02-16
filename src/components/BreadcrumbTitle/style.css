@@ -18,3 +18,11 @@
 .breadcrumb-text:hover {
     color: #000;
 }
+
+/* mobile */
+
+@media (min-width: 320px) and (max-width: 426px) {
+    .breadcrumb-container {
+        margin-top: 70px;
+    }
+}
