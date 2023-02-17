@@ -195,10 +195,11 @@ const Cart = () => {
                     <i className="bi bi-card-image"></i> TẢI ẢNH ĐƠN HÀNG{" "}
                   </button>
                   <button type="submit">
-                    <i className="bi bi-file-earmark-excel"> TẢI FILE EXCEL </i>
+                    <i className="bi bi-file-earmark-excel"></i> TẢI FILE EXCEL
                   </button>
                   <button type="submit">
-                    <i className="bi bi-printer"> IN BÁO GIÁ </i>
+                    <i className="bi bi-printer me-2"></i>
+                    IN BÁO GIÁ
                   </button>
                 </div>
               </div>

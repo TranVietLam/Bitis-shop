@@ -70,7 +70,7 @@
 }
 
 .mobile-cart-quantity {
-    width: 35%;
+    width: 45%;
     border: 1px solid #acacac;
 }
 
@@ -123,6 +123,50 @@
 .mobile-total-price {
     font-size: 20px;
     font-weight: 700;
+}
+
+.cart-cus {
+    margin: 15px 0;
+}
+
+.download-orderImg {
+    width: 100%;
+    background: #757575;
+    border-radius: 5px;
+    line-height: 40px;
+    margin-bottom: 10px;
+    color: #fff;
+    display: block;
+    text-align: center;
+}
+
+.order {
+    display: block;
+    width: 100%;
+    background: #29a07e;
+    color: #fff;
+    border: 0;
+    font-weight: 600;
+    font-size: 17px;
+    height: 40px;
+    margin: 15px 0;
+    border-radius: 6px;
+}
+
+.mobile-cart-btn a {
+    color: #000;
+    text-decoration: none;
+}
+
+/* form */
+.form-group textarea {
+    border: solid 1px #acacac;
+    border-radius: 3px;
+    padding: 10px;
+    height: 64px;
+    display: block;
+    font-size: 16px;
+    width: 100%;
 }
 @media (min-width: 426px) {
     .cart-mobile {
