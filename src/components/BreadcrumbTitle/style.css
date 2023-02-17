@@ -19,10 +19,15 @@
     color: #000;
 }
 
+/* tablet */
+@media (min-width: 426px) and (max-width: 769px) {
+    .breadcrumb-container {
+        margin-top: 60px;
+    }
+}
 /* mobile */
-
 @media (min-width: 320px) and (max-width: 426px) {
     .breadcrumb-container {
-        margin-top: 70px;
+        margin-top: 60px;
     }
 }

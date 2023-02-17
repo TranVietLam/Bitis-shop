@@ -1,0 +1,131 @@
+/* header */
+.cart-mobile {
+    padding: 10px 10px 30px 10px;
+    background: #fff;
+}
+
+.cart-mobile-title {
+    line-height: 36px;
+    border-bottom: 1px solid #29a07e;
+}
+
+.cart-mobile-title a {
+    text-decoration: none;
+    color: #000;
+    outline: none;
+}
+
+/* content */
+.cart-mobile-content {
+    margin-bottom: 15px;
+}
+
+.cart-mobile-content table tr td {
+    padding: 10px 0;
+    border-bottom: 1px solid #acacac;
+}
+
+
+.cart-mobile-content table tr td:nth-child(1) {
+    width: 98px;
+    vertical-align: text-bottom;
+}
+
+.cart-mobile-content table tr td:nth-child(2) {
+    padding-left: 10px;
+}
+
+.cart-mobile-img {
+    float: left;
+    max-width: 98px;
+}
+
+/* item */
+.mobile-item-name {
+    font-weight: 600;
+    line-height: 1;
+    color: #161616;
+    display: block;
+    font-size: 14px;
+}
+
+.mobile-item-code {
+    font-size: 13px;
+    line-height: 1.5;
+    margin: 5px 0;
+}
+
+/* cpc right */
+.cpc-right {
+    font-size: 18px;
+    color: #e20505;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+/* content-pro-cat-bottom */
+.content-pro-cat-bottom {
+    display: flex;
+    align-items: center;
+}
+
+.mobile-cart-quantity {
+    width: 35%;
+    border: 1px solid #acacac;
+}
+
+.mobile-cart-quantity input {
+    width: 50px;
+    box-shadow: none;
+    float: left;
+    height: 33px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #444444;
+    text-align: center;
+    border-top: 0;
+    border-bottom: 0;
+}
+
+.quantity-change {
+    width: 30px;
+    height: 33px;
+    font-size: 14px;
+    text-align: center;
+    display: block;
+    float: left;
+    font-weight: 500;
+    color: #000;
+}
+
+.quantity-input {
+    border: 0;
+}
+
+.delete-from-cart {
+    display: inline-block;
+    line-height: 33px;
+    margin-left: 10px;
+}
+/* footer */
+.mobile-total-cart {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    line-height: 36px;
+}
+
+.mobile-total-content {
+    line-height: 18px;
+    color: #e20505;
+}
+
+.mobile-total-price {
+    font-size: 20px;
+    font-weight: 700;
+}
+@media (min-width: 426px) {
+    .cart-mobile {
+        display: none;
+    }
+}
