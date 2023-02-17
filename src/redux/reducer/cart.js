@@ -17,7 +17,7 @@ const cartReducer = (state = initProduct, action) => {
       if (indexOfProduct > -1) {
         state.product[indexOfProduct].quantity += 1 ;
         state.product[indexOfProduct].totalPrice =
-          Number(state.product[indexOfProduct].price.replace("$", "")) *
+          Number(state.product[indexOfProduct].price.replace("", "")) *
           Number(state.product[indexOfProduct].quantity);
       } else {
         action.payload.quantity = 1;

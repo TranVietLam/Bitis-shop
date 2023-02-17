@@ -3,8 +3,25 @@ import "./cart.css";
 import Breadcrumb from "./../../components/BreadcrumbTitle/index";
 import { Link } from "react-router-dom";
 import CartMobile from "../../components/CartMobileResponsive";
+import { useDispatch, useSelector } from "react-redux";
+import { deleteProduct } from "../../redux/actions/actions";
+import { onAddToCart } from "./../../redux/actions/actions";
 
 const Cart = () => {
+  //product
+  const { dataCart } = useSelector((state) => {
+    return { dataCart: state.cartStore };
+  });
+
+  const dispatch = useDispatch();
+  const handleRemoveProducts = (infoProduct) => {
+    dispatch(deleteProduct(infoProduct));
+  };
+
+  const onChangeQuantity = (e, item) => {
+    item.quantity = e.target.value;
+    dispatch(onAddToCart(item));
+  };
   // const [paymentDetail, setPaymentDetail] = useState(false);
   return (
     <>
@@ -32,51 +49,52 @@ const Cart = () => {
               <div className="cart-col-5">Thao tác</div>
             </div>
           </div>
-
-          <div className="cart-items-body">
-            <div className="shopping-cart-items cart-col-row">
-              <div className="cart-col-1">
-                <a
-                  href="/"
-                  className="item-img"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img
-                    src="https://lacdau.com/media/product/75-1389-cee443f13b710b757de6b494265fc813.jpg"
-                    alt="Products"
-                  />
-                </a>
-                <div className="item-text">
-                  <a href="/" className="d-inline-block font-700">
-                    BỘ KEYCAP AKKO 9009 PBT SUBLIMATION
+          {dataCart.product.map((item, id) => (
+            <div className="cart-items-body">
+              <div className="shopping-cart-items cart-col-row">
+                <div key={id} className="cart-col-1">
+                  <a
+                    href="/"
+                    className="item-img"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      src={item.image}
+                      alt="Products"
+                    />
                   </a>
-                  <p className="d-block item-code">Mã sản phẩm: KCB0061</p>
+                  <div className="item-text">
+                    <a href="/" className="d-inline-block font-700">
+                     {item.name}
+                    </a>
+                    <p className="d-block item-code">Mã sản phẩm: {item.code}</p>
+                  </div>
+                </div>
+
+                <div className="cart-col-2">
+                  <p className="item-price">{item.price} đ</p>
+                </div>
+
+                <div className="cart-col-3 clearfix">
+                  <button className="quantity-change"> - </button>
+                  <input className="quantity-input" type="text" value={1} onChange={(e) => onChangeQuantity(e,item)} />
+                  <button className="quantity-change"> + </button>
+                </div>
+
+                <div className="cart-col-4 text-danger">
+                  <span className="item-price">{item.price} đ</span>
+                </div>
+
+                <div className="cart-col-5">
+                  <button type="button" onClick={() => handleRemoveProducts(item)}>
+                    <i className="bi bi-trash"></i>
+                    Xoá
+                  </button>
                 </div>
               </div>
-
-              <div className="cart-col-2">
-                <p className="item-price">390.000 đ</p>
-              </div>
-
-              <div className="cart-col-3 clearfix">
-                <button className="quantity-change"> - </button>
-                <input className="quantity-input" type="text" value={1} />
-                <button className="quantity-change"> + </button>
-              </div>
-
-              <div className="cart-col-4 text-danger">
-                <span className="item-price">390.000 đ</span>
-              </div>
-
-              <div className="cart-col-5">
-                <button>
-                  <i className="bi bi-trash"></i>
-                  Xoá
-                </button>
-              </div>
             </div>
-          </div>
+          ))}
         </div>
 
         <div className="cart-customer-container clearfix">
