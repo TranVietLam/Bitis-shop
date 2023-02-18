@@ -2,7 +2,7 @@ import React from "react";
 import "./style.css";
 import Slider from "react-slick";
 import DataLotChuot from "../../../DataLotChuot/index";
-
+import { numberWithCommas } from "../../../Utils";
 //redux
 import { useDispatch } from "react-redux";
 import { onAddToCart } from "../../../redux/actions/actions";
@@ -73,7 +73,7 @@ const SliderLotChuot = () => {
               </a>
               <div className="slider-price-container">
                 <div className="slider-price">
-                  {item.price}
+                  {numberWithCommas(item.price)}
                   <span className="ms-1">đ</span>
                 </div>
 

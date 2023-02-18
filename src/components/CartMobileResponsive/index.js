@@ -1,8 +1,45 @@
-import React from "react";
+import React, { useState } from "react";
 import "./style.css";
 import { Link } from "react-router-dom";
 
 const CartMobile = () => {
+  // input
+  const [nameUser, setNameUser] = useState("");
+  const onChangeInputName = (e) => {
+    const value = e.target.value;
+    setNameUser(value);
+  };
+
+  const [emailUser, setEmailUser] = useState("");
+  const onChangeInputEmail = (e) => {
+    const value = e.target.value;
+    setEmailUser(value);
+  };
+
+  const [phoneUser, setPhoneUser] = useState("");
+  const onChangeInputPhone = (e) => {
+    const value = e.target.value;
+    setPhoneUser(value);
+  };
+
+  const [districtUser, setDistrictUser] = useState("");
+  const onChangeInputDistrict = (e) => {
+    const value = e.target.value;
+    setDistrictUser(value);
+  };
+
+  const [addressUser, setAddressUser] = useState("");
+  const onChangeInputAddress = (e) => {
+    const value = e.target.value;
+    setAddressUser(value);
+  };
+
+  const [note, setNote] = useState("");
+  const onChangeNote = (e) => {
+    const value = e.target.value;
+    setNote(value);
+  };
+
   return (
     <>
       <div className="cart-mobile clearfix container">
@@ -50,6 +87,7 @@ const CartMobile = () => {
                           type="text"
                           className="mobile-cart-quantity"
                           value={1}
+                          readOnly
                         />
                         <button type="submit" className="quantity-change">
                           +
@@ -87,6 +125,8 @@ const CartMobile = () => {
                   type="text"
                   name="user_info[name]"
                   className="form-control"
+                  onChange={onChangeInputName}
+                  value={nameUser}
                 />
               </div>
               <div className="form-group">
@@ -95,6 +135,8 @@ const CartMobile = () => {
                   type="text"
                   name="user_info[email]"
                   className="form-control"
+                  onChange={onChangeInputEmail}
+                  value={emailUser}
                 />
               </div>
               <div className="form-group">
@@ -103,6 +145,8 @@ const CartMobile = () => {
                   type="text"
                   name="user_info[tel]"
                   className="form-control"
+                  onChange={onChangeInputPhone}
+                  value={phoneUser}
                 />
               </div>
               <div className="form-group">
@@ -178,6 +222,8 @@ const CartMobile = () => {
                     type="text"
                     name="user_info[district]"
                     className="form-control"
+                    onChange={onChangeInputDistrict}
+                    value={districtUser}
                   />
                 </div>
               </div>
@@ -187,11 +233,18 @@ const CartMobile = () => {
                   type="text"
                   name="user_info[address]"
                   className="form-control"
+                  onChange={onChangeInputAddress}
+                  value={addressUser}
                 />
               </div>
               <div className="form-group">
                 <label>Ghi chú</label>
-                <textarea name="user_info[note]" id="buyer_note"></textarea>
+                <textarea
+                  name="user_info[note]"
+                  id="buyer_note"
+                  onChange={onChangeNote}
+                  value={note}
+                ></textarea>
               </div>
             </div>
             {/* Cart Thông tin thanh toán */}
@@ -203,12 +256,11 @@ const CartMobile = () => {
                   id="pay-method-1"
                   name="pay-method"
                   value="1"
-                  checked
                 />
                 <span className="checkmark"></span>
                 <span>Thanh toán tiền mặt khi nhận hàng</span>
 
-                <div class="payment-detail"></div>
+                <div className="payment-detail"></div>
               </label>
               <label className="label-container">
                 <input

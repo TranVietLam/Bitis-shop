@@ -9,6 +9,7 @@ import { useDispatch } from "react-redux";
 import Menu from "./../../components/MenuList/index";
 import NavbarTablet from "./../../components/NavbarTablet/index";
 import { onAddToCart } from "./../../redux/actions/actions";
+import { numberWithCommas } from './../../Utils/index';
 
 const Header = () => {
   //product render
@@ -188,8 +189,8 @@ const Header = () => {
                 <div className="header-cart-hover">
                   <div className="cart-items-holder">
                     {dataCart.product.map((item, id) => (
-                      <>
-                        <div key={id} className="cart-item">
+                      <div key={id}>
+                        <div className="cart-item">
                           <Link to="/cart" className="cart-img">
                             <img src={item.image} alt="images" />
                           </Link>
@@ -205,12 +206,12 @@ const Header = () => {
                                 x{item.quantity}
                               </b>
                               <b className="text-danger fw-semibold fs-6">
-                                {item.price}
+                                {numberWithCommas(item.price)} đ
                               </b>
                             </p>
                           </div>
                         </div>
-                      </>
+                      </div>
                     ))}
                     <div className="cart-price-holder">
                       <p className="text-secondary font-400 m-0 text-end">
@@ -218,17 +219,17 @@ const Header = () => {
                         <span className="text-danger">
                           (
                           <span className="cart-counts text-danger me-1">
-                            1
+                            {dataCart.product.length}
                           </span>
                           sản phẩm):
                         </span>
                         <span className="text-danger text-18 fw-semibold mx-2 fs-5">
-                          390.000 đ
+                          {numberWithCommas(dataCart.totalPrice)} đ
                         </span>
                       </p>
-                      <button className="d-block text-center text-white btn-goCart">
+                      <Link to="/cart" className="d-block text-center text-white btn-goCart">
                         THANH TOÁN NGAY
-                      </button>
+                      </Link>
                     </div>
                   </div>
                 </div>

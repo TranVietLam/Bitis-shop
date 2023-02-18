@@ -1,13 +1,55 @@
-import React from "react";
+import React, { useState } from "react";
 import "./cart.css";
 import Breadcrumb from "./../../components/BreadcrumbTitle/index";
 import { Link } from "react-router-dom";
 import CartMobile from "../../components/CartMobileResponsive";
 import { useDispatch, useSelector } from "react-redux";
-import { deleteProduct } from "../../redux/actions/actions";
-import { onAddToCart } from "./../../redux/actions/actions";
+import {
+  deleteProduct,
+  onAddToCart,
+  minusQuantity,
+} from "../../redux/actions/actions";
+import { numberWithCommas } from "./../../Utils/index";
+import ModalConfirm from "../../components/ModalConfirmDeleteProd";
 
 const Cart = () => {
+  // input
+  const [nameUser, setNameUser] = useState("");
+  const onChangeInputName = (e) => {
+    const value = e.target.value;
+    setNameUser(value);
+  };
+
+  const [emailUser, setEmailUser] = useState("");
+  const onChangeInputEmail = (e) => {
+    const value = e.target.value;
+    setEmailUser(value);
+  };
+
+  const [phoneUser, setPhoneUser] = useState("");
+  const onChangeInputPhone = (e) => {
+    const value = e.target.value;
+    setPhoneUser(value);
+  };
+
+  const [districtUser, setDistrictUser] = useState("");
+  const onChangeInputDistrict = (e) => {
+    const value = e.target.value;
+    setDistrictUser(value);
+  };
+
+  const [addressUser, setAddressUser] = useState("");
+  const onChangeInputAddress = (e) => {
+    const value = e.target.value;
+    setAddressUser(value);
+  };
+
+  const [note, setNote] = useState("");
+  const onChangeNote = (e) => {
+    const value = e.target.value;
+    setNote(value);
+  };
+
   //product
   const { dataCart } = useSelector((state) => {
     return { dataCart: state.cartStore };
@@ -15,16 +57,36 @@ const Cart = () => {
 
   const dispatch = useDispatch();
   const handleRemoveProducts = (infoProduct) => {
-    dispatch(deleteProduct(infoProduct));
+    setShow(true);
+    setInfoProdForRemove(infoProduct);
   };
 
-  const onChangeQuantity = (e, item) => {
-    item.quantity = e.target.value;
+  const quantityPlus = (item) => {
     dispatch(onAddToCart(item));
   };
-  // const [paymentDetail, setPaymentDetail] = useState(false);
+
+  const [infoProdForRemove, setInfoProdForRemove] = useState({});
+  const [show, setShow] = useState(false);
+  const quantityMinus = (item) => {
+    if (item.quantity === 1) {
+      setShow(true);
+      setInfoProdForRemove(item);
+    } else {
+      dispatch(minusQuantity(item));
+    }
+  };
+
+  const [paymentDetail, setPaymentDetail] = useState(false);
   return (
     <>
+      <ModalConfirm
+        show={show}
+        handleClose={() => setShow(false)}
+        handleConfirm={() => {
+          dispatch(deleteProduct(infoProdForRemove));
+          setShow(false);
+        }}
+      />
       <Breadcrumb page="Thông tin giỏ hàng" />
       <CartMobile />
       <div className="container cart-page">
@@ -37,7 +99,13 @@ const Cart = () => {
                   <i className="bi bi-caret-left-fill"></i>
                   CHỌN TIẾP SẢN PHẨM KHÁC
                 </Link>
-                <button> XÓA GIỎ HÀNG </button>
+                <button
+                  type="button"
+                  onClick={() => handleRemoveProducts(dataCart)}
+                >
+                  {" "}
+                  XÓA GIỎ HÀNG{" "}
+                </button>
               </div>
             </div>
 
@@ -50,44 +118,60 @@ const Cart = () => {
             </div>
           </div>
           {dataCart.product.map((item, id) => (
-            <div className="cart-items-body">
+            <div key={id} className="cart-items-body">
               <div className="shopping-cart-items cart-col-row">
-                <div key={id} className="cart-col-1">
+                <div className="cart-col-1">
                   <a
                     href="/"
                     className="item-img"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img
-                      src={item.image}
-                      alt="Products"
-                    />
+                    <img src={item.image} alt="Products" />
                   </a>
                   <div className="item-text">
                     <a href="/" className="d-inline-block font-700">
-                     {item.name}
+                      {item.name}
                     </a>
-                    <p className="d-block item-code">Mã sản phẩm: {item.code}</p>
+                    <p className="d-block item-code">
+                      Mã sản phẩm: {item.code}
+                    </p>
                   </div>
                 </div>
 
                 <div className="cart-col-2">
-                  <p className="item-price">{item.price} đ</p>
+                  <p className="item-price">{numberWithCommas(item.price)} đ</p>
                 </div>
 
                 <div className="cart-col-3 clearfix">
-                  <button className="quantity-change"> - </button>
-                  <input className="quantity-input" type="text" value={1} onChange={(e) => onChangeQuantity(e,item)} />
-                  <button className="quantity-change"> + </button>
+                  <button
+                    className="quantity-change"
+                    onClick={() => quantityMinus(item)}
+                  >
+                    {" "}
+                    -{" "}
+                  </button>
+                  <div className="quantity-input">{item.quantity}</div>
+                  <button
+                    className="quantity-change"
+                    onClick={() => quantityPlus(item)}
+                  >
+                    {" "}
+                    +{" "}
+                  </button>
                 </div>
 
                 <div className="cart-col-4 text-danger">
-                  <span className="item-price">{item.price} đ</span>
+                  <span className="item-price">
+                    {numberWithCommas(item.totalPrice)} đ
+                  </span>
                 </div>
 
                 <div className="cart-col-5">
-                  <button type="button" onClick={() => handleRemoveProducts(item)}>
+                  <button
+                    type="button"
+                    onClick={() => handleRemoveProducts(item)}
+                  >
                     <i className="bi bi-trash"></i>
                     Xoá
                   </button>
@@ -110,18 +194,24 @@ const Cart = () => {
                   placeholder="Họ và tên"
                   id="buyer-name"
                   name="user_info[name]"
+                  onChange={onChangeInputName}
+                  value={nameUser}
                 />
                 <input
                   type="text"
                   placeholder="Email"
                   id="buyer-email"
                   name="user_info[email]"
+                  onChange={onChangeInputEmail}
+                  value={emailUser}
                 />
                 <input
                   type="text"
                   placeholder="Số điện thoại"
                   id="buyer-tel"
                   name="user_info[tel]"
+                  onChange={onChangeInputPhone}
+                  value={phoneUser}
                 />
                 <select name="user_info[province]" id="buyer-province">
                   <option value="0">Tỉnh/Thành phố</option>
@@ -194,12 +284,16 @@ const Cart = () => {
                   placeholder="Quận/Huyện"
                   id="buyer-district"
                   name="user_info[district]"
+                  onChange={onChangeInputDistrict}
+                  value={districtUser}
                 ></input>
                 <input
                   type="text"
                   placeholder="Toà nhà, Tên đường..."
                   id="buyer-address"
                   name="user_info[address]"
+                  onChange={onChangeInputAddress}
+                  value={addressUser}
                 ></input>
               </div>
               <div className="form-info-group clearfix">
@@ -207,6 +301,8 @@ const Cart = () => {
                   placeholder="Nhập ghi chú cho chúng tôi"
                   name="user_info[note]"
                   id="buyer-note"
+                  onChange={onChangeNote}
+                  value={note}
                 ></textarea>
                 <div className="cart-btn-form">
                   <button type="submit">
@@ -232,17 +328,18 @@ const Cart = () => {
             <div className="payment">
               <label className="label-container">
                 <input
+                  onClick={() => setPaymentDetail(false)}
                   type="radio"
                   id="pay-method-1"
                   name="pay-method"
                   value={1}
-                  checked
                 />
                 <span className="checkmark"></span>
                 <span>Thanh toán tiền mặt khi nhận hàng</span>
               </label>
               <label className="label-container">
                 <input
+                  onClick={() => setPaymentDetail(true)}
                   type="radio"
                   id="pay-method-2"
                   name="pay-method"
@@ -250,17 +347,22 @@ const Cart = () => {
                 />
                 <span className="checkmark"></span>
                 <span>Thanh toán qua chuyển khoản</span>
-                <div className="payment-detail">
-                  - STK: 104604866879 <br />
-                  - Chủ Tk: Trần Viết Lãm <br />- Chi nhánh: Đồng Nai
-                </div>
+                {paymentDetail && (
+                  <div className="payment-detail">
+                    - STK: 104604866879 <br />
+                    - Chủ Tk: Trần Viết Lãm <br />- Chi nhánh: Đồng Nai
+                  </div>
+                )}
               </label>
             </div>
             <div className="cart-total-price">
-              Tổng tiền hàng (<span className="text-danger">1 sản phẩm</span>
+              Tổng tiền hàng (
+              <span className="text-danger">
+                {dataCart.totalQuantity} sản phẩm
+              </span>
               ):
               <b className="text-danger text-total-price">
-                <span>390.000đ</span>
+                <span>{numberWithCommas(dataCart.totalPrice)} đ</span>
               </b>
             </div>
             <div className="cart-btn-buy clearfix">

@@ -5,7 +5,7 @@ const DataLotChuot = [
         code: "PAD0413",
         quantity: "Còn Hàng",
         name : "PAD 33 CÁ HEO WITH LOVE",
-        price : "60.000",
+        price : "60000",
     },
 
     {
@@ -14,7 +14,7 @@ const DataLotChuot = [
         code: "PAD0414",
         quantity: "Còn Hàng",
         name : "PAD 33 GẤU LOVE YOU",
-        price : "60.000",
+        price : "60000",
     },
 
     {
@@ -23,7 +23,7 @@ const DataLotChuot = [
         code: "PAD0608",
         quantity: "Còn Hàng",
         name : "PAD 33 KONG X GODZILLA",
-        price : "60.000",
+        price : "60000",
     },
 
     {
@@ -32,7 +32,7 @@ const DataLotChuot = [
         code: "PAD0443",
         quantity: "Còn Hàng",
         name : "PAD 22 LỢN HỒNG",
-        price : "35.000",
+        price : "35000",
     },
 
     {
@@ -41,7 +41,7 @@ const DataLotChuot = [
         code: "PAD0679",
         quantity: "Còn Hàng",
         name : "PAD 94 ASUS ROG TÍM",
-        price : "120.000",
+        price : "120000",
     },
 
     {
@@ -50,7 +50,7 @@ const DataLotChuot = [
         code: "PAD0105",
         quantity: "Còn Hàng",
         name : "PAD 94 CÁC HÀNH TINH",
-        price : "120.000",
+        price : "120000",
     },
 
     {
@@ -59,7 +59,7 @@ const DataLotChuot = [
         code: "PAD0681",
         quantity: "Còn Hàng",
         name : "PAD 94 DOODLE TRẮNG",
-        price : "120.000",
+        price : "120000",
     },
 
     {
@@ -68,7 +68,7 @@ const DataLotChuot = [
         code: "PAD0119",
         quantity: "Còn Hàng",
         name : "PAD 94 2 HẠC XANH",
-        price : "120.000",
+        price : "120000",
     },
 
     {
@@ -77,7 +77,7 @@ const DataLotChuot = [
         code: "PAD0498",
         quantity: "Còn Hàng",
         name : "PAD 94 BEAN PACMAN",
-        price : "120.000",
+        price : "120000",
     },
 
     {
@@ -86,7 +86,7 @@ const DataLotChuot = [
         code: "PAD0270",
         quantity: "Còn Hàng",
         name : "PAD 94 4 LINE FRIEND",
-        price : "120.000",
+        price : "120000",
     },
 ]
 

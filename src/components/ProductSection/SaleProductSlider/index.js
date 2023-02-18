@@ -2,6 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import "./style.css";
 import DataProductSale from "../../../DataProductSale/index";
+import { numberWithCommas } from "../../../Utils";
 
 //redux
 import { useDispatch } from 'react-redux';
@@ -82,7 +83,7 @@ const SaleSlider = () => {
                         <span className="ms-1">đ</span>
                       </del>
                       <span className="product-price">
-                        {item.price}
+                        {numberWithCommas(item.price)}
                         <span className="ms-1">đ</span>
                       </span>
                       <div
