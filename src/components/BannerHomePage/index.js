@@ -11,14 +11,14 @@ import BannerRight3 from "../../Assets/images/banner/Banner-right3.png";
 import BannerUnder1 from "../../Assets/images/banner/Banner-under1.png";
 import BannerUnder2 from "../../Assets/images/banner/Banner-under2.png";
 import BannerUnder3 from "../../Assets/images/banner/Banner-under3.png";
-import Menu from "../../components/MenuList";
+import MenuListHomePage from './../MenuListHomePage/index';
 
 const BannerHomePage = () => {
   return (
     <>
       <div className="homepage-container d-flex justify-content-center">
         <div className="home-left-group">
-          <Menu />
+          <MenuListHomePage />
         </div>
         <div className="home-container">
           <div className="home-container-group d-flex">

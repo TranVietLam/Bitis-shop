@@ -204,6 +204,10 @@
   .home-container {
     width: 100%;
   }
+  
+  .home-left-group {
+    display: none;
+  }
 }
 
 /* /* latop large screen */

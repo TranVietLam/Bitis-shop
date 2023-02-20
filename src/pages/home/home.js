@@ -4,6 +4,7 @@ import BannerHomePage from "./../../components/BannerHomePage/index";
 import ProductSection from "../../components/ProductSection";
 import TrendingProduct from "../../components/TrendingProduct";
 import HomeBoxSlider from "../../components/HomeBoxSlider";
+import SocialConnect from "../../components/SocialConnect";
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
         <ProductSection />
         <TrendingProduct />
         <HomeBoxSlider />
+        <SocialConnect/>
         {/* {/* <iframe
           title="fanpage"
           src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fbitisthustore&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=492715174604716"
