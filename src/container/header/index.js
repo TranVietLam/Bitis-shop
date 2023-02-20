@@ -179,7 +179,7 @@ const Header = () => {
                 </a>
               </div>
               <div className="header-right-item item-cart">
-                <a href="/cart" className="icons icon-cart bi bi-cart3">
+                <a href="/cart" className="icons-header icon-cart bi bi-cart3">
                   <span className="cart-count">{cartAmount}</span>
                 </a>
                 <NavLink to="/cart" className="cart">

@@ -1,0 +1,28 @@
+.footer-tag-group {
+    border-radius: 20px;
+    padding: 16px 12px 0;
+    margin-bottom: 20px;
+}
+
+.footer-tag-group b {
+    margin: 0 16px 16px 0;
+    font-weight: 700;
+}
+
+.footer-tag-group a {
+    position: relative;
+    margin: 0 16px 16px 0;
+    font-size: 14px;
+    line-height: 18px;
+    color: #00a07d;
+    display: inline-flex;
+    text-decoration: none;
+}
+
+.footer-tag-group a:hover {
+    color: #00a07d;
+}
+
+.footer-tag-group i {
+    margin-right: 6px;
+}

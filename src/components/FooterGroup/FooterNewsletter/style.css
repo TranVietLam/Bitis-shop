@@ -1,0 +1,103 @@
+.footer-newsletter-group {
+    background: #20a07e;
+    padding: 30px 0;
+}
+
+.icons {
+    background: url(../../../Assets/images/mail.png) no-repeat;
+}
+
+.icon-mail {
+    width: 85px;
+    height: 80px;
+    margin-right: 14px;
+    background-size: 550px;
+    background-position: -12px -211px;
+}
+
+.newsletter-text {
+    margin: 0 17px 0 0;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.newsletter-text b {
+    margin-bottom: 8px;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 30px;
+}
+
+.font-300 {
+    font-weight: 300;
+}
+
+.newsletter-form {
+    background: #fff;
+    width: 390px;
+    border-radius: 30px;
+    overflow: hidden;
+    padding: 0 8px 0 20px;
+}
+
+.newsletter-input {
+    color: #999;
+    height: 56px;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    width: calc(100% - 50px);
+    font-size: 14px;
+}
+
+.icon-submit {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    background-position: -81px -118px;
+    background-size: 310px;
+}
+/* tablet */
+@media (min-width: 426px) and (max-width: 769px) {
+        .newsletter-form {
+            width: 99%;
+            margin-top: 20px;
+        }
+}
+/* mobile */
+@media (min-width: 320px) and (max-width: 426px) {
+    .footer-newsletter-group {
+        padding: 18px 10px;
+    }
+
+    .icon-mail {
+        width: 54px;
+        height: 50px;
+        margin: 0 14px 10px 0;
+        background-position: -8px -126px;
+        background-size: 330px;
+    }
+
+    .newsletter-text {
+        margin: 0 0 10px;
+    }
+
+    .newsletter-text b {
+        margin-bottom: 3px;
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+    .newsletter-form {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .newsletter-input {
+        font-size: 16px;
+    }
+    
+}

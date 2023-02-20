@@ -6,6 +6,8 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { loadDataLS } from "./../redux/actions/actions";
+import FooterTag from "../components/FooterGroup/FooterTag";
+import FooterNewsletter from "../components/FooterGroup/FooterNewsletter";
 
 const DefaultLayout = () => {
   let location = useLocation();
@@ -21,7 +23,11 @@ const DefaultLayout = () => {
           <Route key={idx} path={route.path} element={route.component} />
         ))}
       </Routes>
-      <Footer />
+      <div className="container">
+        <FooterTag />
+        <FooterNewsletter />
+        <Footer />
+      </div>
     </div>
   );
 };
