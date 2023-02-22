@@ -42,7 +42,7 @@ const CartMobile = () => {
 
   return (
     <>
-      <div className="cart-mobile clearfix container">
+      <div className="cart-mobile clearfix container mb-3">
         <div className="cart-mobile-title d-flex align-items-center justify-content-between">
           <Link to="/home">
             <i className="bi bi-caret-left-fill"></i>

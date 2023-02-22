@@ -1,0 +1,109 @@
+.footer-info-group a {
+  color: #000;
+  text-decoration: none;
+}
+
+.footer-info-group a:hover {
+  cursor: pointer;
+  color: #29a07e;
+}
+
+.footer-info-item {
+  padding-top: 14px;
+}
+
+.footer-info-item a {
+  display: inline-flex;
+  line-height: 27%;
+  min-width: 51%;
+}
+
+.footer-info-item i {
+  font-weight: 900;
+  margin-right: 6px;
+  font-size: 10px;
+  color: #999;
+}
+
+.footer-info-list iframe {
+    width: 350px;
+    height: 130px;
+}
+
+.footer-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  margin-bottom: 17px;
+}
+
+.footer-logo {
+  margin-bottom: 20px;
+}
+
+.footer-logo img {
+  max-height: 85px;
+  width: auto;
+}
+
+.footer-address-item {
+  line-height: 16px;
+  display: flex;
+}
+
+.icon-map {
+  background: url(../../Assets/images/social-icons/sprite.png) no-repeat center;
+  background-size: 290px;
+  background-position: -259px -6px;
+  width: 30px;
+  height: 20px;
+}
+
+.icon-phone {
+  background: url(../../Assets/images/social-icons/sprite.png) no-repeat center;
+  background-size: 290px;
+  background-position: -261px -37px;
+  width: 30px;
+  height: 20px;
+}
+
+.icon-email {
+  background: url(../../Assets/images/social-icons/sprite.png) no-repeat center;
+  background-size: 290px;
+  background-position: -261px -67px;
+  width: 30px;
+  height: 20px;
+}
+
+.footer-social-media {
+  display: flex;
+}
+
+.footer-social-media a {
+  width: 30px;
+  height: 30px;
+  margin-right: 6px;
+  background-size: 350px;
+  position: relative;
+  bottom: 0;
+  -webkit-transition: 0.3s all;
+}
+
+.icon-footer-facebook {
+  background: url(../../Assets/images/social-icons/sprite.png) no-repeat;
+  background-position: -87px -294px;
+  width: 30px;
+  height: 30px;
+}
+
+.icon-messenger i {
+  color: #006aff;
+  margin-top: 2px;
+  display: flex;
+  font-size: 29.5px;
+}
+
+.icon-phone-cirle {
+  background: url(../../Assets/images/social-icons/sprite.png) no-repeat center;
+  background-position: -231px -294px;
+}

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./style.css";
 import Slider from "react-slick";
 import DataLotChuot from "../../../DataLotChuot/index";
@@ -6,11 +6,23 @@ import { numberWithCommas } from "../../../Utils";
 //redux
 import { useDispatch } from "react-redux";
 import { onAddToCart } from "../../../redux/actions/actions";
+import ModalSuccess from "../../ModalSuccess";
 
 const SliderLotChuot = () => {
+  //modal
+  const [show, setShow] = useState(false);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setShow(false);
+    }, 3300);
+
+    return () => clearInterval(interval);
+  }, []);
+
   const dispatch = useDispatch();
   const handleAddToCart = (infoProduct) => {
     dispatch(onAddToCart(infoProduct));
+    setShow(true);
   };
   const settings = {
     dots: true,
@@ -52,6 +64,7 @@ const SliderLotChuot = () => {
   };
   return (
     <>
+      <ModalSuccess show={show} />
       <Slider {...settings}>
         {DataLotChuot.map((item, id) => (
           <div key={id} className="slider-item">
@@ -66,7 +79,7 @@ const SliderLotChuot = () => {
             <div className="slider-text">
               <div className="d-flex align-item-center justify-content-between">
                 <p className="slider-code">Mã : {item.code}</p>
-                <p className="slider-quantity">{item.quantity}</p>
+                <p className="slider-quantity"></p>
               </div>
               <a href="/" className="slider-name">
                 {item.name}

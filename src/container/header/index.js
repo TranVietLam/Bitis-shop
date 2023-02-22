@@ -9,7 +9,7 @@ import { useDispatch } from "react-redux";
 import Menu from "./../../components/MenuList/index";
 import NavbarTablet from "./../../components/NavbarTablet/index";
 import { onAddToCart } from "./../../redux/actions/actions";
-import { numberWithCommas } from './../../Utils/index';
+import { numberWithCommas } from "./../../Utils/index";
 
 const Header = () => {
   //product render
@@ -47,7 +47,7 @@ const Header = () => {
                 <div className="holder-container">
                   <div className="holder-item">
                     <a
-                      href="https://goo.gl/maps/eVNpqoLAagPwctjs7"
+                      href="https://maps.app.goo.gl/jY682zFD6E5ZUYKB6"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -161,7 +161,7 @@ const Header = () => {
 
             <div className="header-right-group">
               <div className="header-right-item">
-                <i className="icon-phone ringing me-3 bi bi-telephone-forward" />
+                <i className="icon-phones ringing me-3 bi bi-telephone-forward" />
                 <a href="tel:0879259755" className="text font-700">
                   <div className="font-400 me-2 text-black">Hotline</div>
                   <b>0879.259.755</b>
@@ -213,24 +213,27 @@ const Header = () => {
                         </div>
                       </div>
                     ))}
-                    <div className="cart-price-holder">
-                      <p className="text-secondary font-400 m-0 text-end">
-                        Tổng tiền hàng
-                        <span className="text-danger">
-                          (
-                          <span className="cart-counts text-danger me-1">
-                            {dataCart.product.length}
-                          </span>
-                          sản phẩm):
+                  </div>
+                  <div className="cart-price-holder">
+                    <p className="text-secondary font-400 m-0 text-end">
+                      Tổng tiền hàng
+                      <span className="text-danger">
+                        (
+                        <span className="cart-counts text-danger me-1">
+                          {dataCart.product.length}
                         </span>
-                        <span className="text-danger text-18 fw-semibold mx-2 fs-5">
-                          {numberWithCommas(dataCart.totalPrice)} đ
-                        </span>
-                      </p>
-                      <Link to="/cart" className="d-block text-center text-white btn-goCart">
-                        THANH TOÁN NGAY
-                      </Link>
-                    </div>
+                        sản phẩm):
+                      </span>
+                      <span className="text-danger text-18 fw-semibold mx-2 fs-5">
+                        {numberWithCommas(dataCart.totalPrice)} đ
+                      </span>
+                    </p>
+                    <Link
+                      to="/cart"
+                      className="d-block text-center text-white btn-goCart"
+                    >
+                      THANH TOÁN NGAY
+                    </Link>
                   </div>
                 </div>
               </div>

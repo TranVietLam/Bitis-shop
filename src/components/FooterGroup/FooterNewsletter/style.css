@@ -42,6 +42,7 @@
 }
 
 .newsletter-input {
+    outline: none;
     color: #999;
     height: 56px;
     border: 0;

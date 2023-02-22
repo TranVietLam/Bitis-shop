@@ -26,8 +26,8 @@ const DefaultLayout = () => {
       <div className="container">
         <FooterTag />
         <FooterNewsletter />
-        <Footer />
       </div>
+      <Footer />
     </div>
   );
 };

@@ -1,19 +1,30 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
 import "./style.css";
 import DataProductSale from "../../../DataProductSale/index";
 import { numberWithCommas } from "../../../Utils";
 
 //redux
-import { useDispatch } from 'react-redux';
-import { onAddToCart } from '../../../redux/actions/actions';
-
+import { useDispatch } from "react-redux";
+import { onAddToCart } from "../../../redux/actions/actions";
+import ModalSuccess from "../../ModalSuccess";
 
 const SaleSlider = () => {
+  //modal
+  const [show, setShow] = useState(false);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setShow(false);
+    }, 3300);
+
+    return () => clearInterval(interval);
+  }, []);
+
   const dispatch = useDispatch();
   const handleAddToCart = (infoProduct) => {
-      dispatch(onAddToCart(infoProduct));
-  }
+    dispatch(onAddToCart(infoProduct));
+    setShow(true);
+  };
   const settings = {
     dots: true,
     infinite: false,
@@ -54,10 +65,11 @@ const SaleSlider = () => {
   };
   return (
     <>
+      <ModalSuccess show={show} />
       <Slider {...settings}>
         {DataProductSale.map((item, id) => (
           <div key={id}>
-            <div  className="container">
+            <div className="container">
               <div className="product-card">
                 <div className="product-item">
                   <a
@@ -87,7 +99,9 @@ const SaleSlider = () => {
                         <span className="ms-1">đ</span>
                       </span>
                       <div
-                        onClick={() => {handleAddToCart(item)}}
+                        onClick={() => {
+                          handleAddToCart(item);
+                        }}
                         className="product-btn-cart"
                       >
                         {" "}
@@ -107,7 +121,9 @@ const SaleSlider = () => {
         rel="noopener noreferrer"
       >
         Xem thêm
-        <span><i className="bi bi-arrow-right ms-2"></i></span>
+        <span>
+          <i className="bi bi-arrow-right ms-2"></i>
+        </span>
       </a>
     </>
   );
