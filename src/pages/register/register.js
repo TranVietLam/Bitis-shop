@@ -4,10 +4,10 @@ import "./register.css";
 
 const Register = () => {
   return (
-    <div>
+    <>
       <Breadcrumb page="Đăng Ký Tài Khoản Thành Viên" />
-      <div className="container mt-5">
-        <div className="box-register">
+      <div className="container">
+      <div className="box-register">
           <div className="register-title text-center">
             Tạo tài khoản khách hàng cá nhân
           </div>
@@ -380,7 +380,7 @@ const Register = () => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

@@ -101,7 +101,7 @@ const Cart = () => {
                 </Link>
                 <button
                   type="button"
-                  onClick={() => handleRemoveProducts(dataCart)}
+                  onClick={() => handleRemoveProducts()}
                 >
                   {" "}
                   XÓA GIỎ HÀNG{" "}

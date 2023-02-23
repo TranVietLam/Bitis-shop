@@ -1,3 +1,4 @@
+
 /* header */
 .register-title {
   width: 100%;
@@ -16,10 +17,18 @@
 
 /* container */
 .box-register {
+  background-color: #fff;
   display: flex;
   flex-direction: column;
   max-height: 100%;
   padding: 20px 10px;
+  margin-bottom: 20px;
+}
+
+.box-register-form::after {
+  content: "";
+  display: block;
+  clear: both;
 }
 
 /* form */

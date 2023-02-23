@@ -8,6 +8,7 @@
 
 .social-container.active {
     right: 10px;
+    z-index: 999;
 }
 
 .social-container a {

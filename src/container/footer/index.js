@@ -2,13 +2,16 @@ import React from "react";
 import "./style.css";
 import Logo from "../../Assets/images/logo.png";
 
+//acordition
+import Accordion from "react-bootstrap/Accordion";
+
 const Footer = () => {
   return (
     <>
-      <div className="footer-info-group bg-white mt-4">
+      <div className="footer-info-group bg-white mt-4 mb-2">
         <div className="container">
           <div className="row">
-            <div className="col-3">
+            <div className="col-lg-3 col-sm-12">
               <a href="/" className="footer-logo d-block">
                 <img src={Logo} alt="Logo" className="footer-img" />
               </a>
@@ -47,6 +50,64 @@ const Footer = () => {
                 </a>
                 <a href="tel:0879259755" className="icon-phone-cirle"></a>
               </div>
+            </div>
+            <div className="accordion-mobile mt-3">
+              <Accordion defaultActiveKey="0">
+                <Accordion.Item eventKey="0">
+                  <Accordion.Header className="footer-title">
+                    HỖ TRỢ KHÁCH HÀNG
+                  </Accordion.Header>
+                  <Accordion.Body className="footer-info-list">
+                    <a href="/">
+                      <i className="bi bi-circle-fill"></i>
+                      Hướng dẫn mua hàng trực tuyến
+                    </a>
+                    <a href="/">
+                      <i className="bi bi-circle-fill"></i>
+                      Hướng dẫn thanh toán
+                    </a>
+                    <a href="/">
+                      <i className="bi bi-circle-fill"></i>
+                      Gửi yêu cầu bảo hành
+                    </a>
+                    <a href="/">
+                      <i className="bi bi-circle-fill"></i>
+                      Góp ý, Khiếu nại
+                    </a>
+                  </Accordion.Body>
+                </Accordion.Item>
+                <Accordion.Item eventKey="1">
+                  <Accordion.Header className="footer-title">
+                    CHÍNH SÁCH CHUNG
+                  </Accordion.Header>
+                  <Accordion.Body>
+                    <a href="/">
+                      <i className="bi bi-circle-fill"></i>
+                      Chính sách, quy định chung
+                    </a>
+                    <a href="/">
+                      <i className="bi bi-circle-fill"></i>
+                      Chính sách vận chuyển
+                    </a>
+                    <a href="/">
+                      <i className="bi bi-circle-fill"></i>
+                      Chính sách bảo hành
+                    </a>
+                    <a href="/">
+                      <i className="bi bi-circle-fill"></i>
+                      Chính sách đổi trả và hoàn tiền
+                    </a>
+                    <a href="/">
+                      <i className="bi bi-circle-fill"></i>
+                      Chính sách xử lý khiếu nại
+                    </a>
+                    <a href="/">
+                      <i className="bi bi-circle-fill"></i>
+                      Bảo mật thông tin khách hàng
+                    </a>
+                  </Accordion.Body>
+                </Accordion.Item>
+              </Accordion>
             </div>
             <div className="col-3 footer-info-item">
               <p className="footer-title">HỖ TRỢ KHÁCH HÀNG</p>
@@ -109,6 +170,11 @@ const Footer = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className="container footer-end">
+      © 2022 Cửa Hàng Bitis's Thu <br/>
+      Địa chỉ : 47/5 Khu Phố 5B, Phường Tân Biên, Biên Hòa, Đồng Nai <br/>
+      GPDKKD số 47A8080472 do UBND TP.Biên Hòa cấp ngày 04/10/2022
       </div>
     </>
   );
