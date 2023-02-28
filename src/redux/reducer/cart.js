@@ -1,6 +1,7 @@
 import {
   BUY_PRODUCT,
   DELETE_PRODUCT,
+  DELETE_ALL_PRODUCT,
   LOAD_DATA_LS,
   QUANTITY_MINUS,
 } from "../actions/actionTypes";
@@ -35,9 +36,9 @@ const cartReducer = (state = initProduct, action) => {
       state.product.forEach((item) => {
         if (item.totalPrice > 0) {
           total += item.totalPrice;
-        } 
+        }
         if (item.quantity > 0) {
-          totalQuantity += item.quantity
+          totalQuantity += item.quantity;
         }
       });
       return { ...state, totalPrice: total, totalQuantity };
@@ -60,10 +61,15 @@ const cartReducer = (state = initProduct, action) => {
           total += item.totalPrice;
         }
         if (item.quantity > 0) {
-          totalQuantity += item.quantity
+          totalQuantity += item.quantity;
         }
       });
       return { ...state, totalPrice: total, totalQuantity };
+    }
+
+    case DELETE_ALL_PRODUCT: {
+      localStorage.setItem("Product", JSON.stringify([]));
+      return { ...state, product: [], totalPrice: 0, totalQuantity: 0 };
     }
 
     case LOAD_DATA_LS: {
@@ -75,7 +81,7 @@ const cartReducer = (state = initProduct, action) => {
           total += item.totalPrice;
         }
         if (item.quantity > 0) {
-          totalQuantity += item.quantity
+          totalQuantity += item.quantity;
         }
       });
       return { ...state, totalPrice: total, totalQuantity };
@@ -103,7 +109,7 @@ const cartReducer = (state = initProduct, action) => {
           total += item.totalPrice;
         }
         if (item.quantity > 0) {
-          totalQuantity += item.quantity
+          totalQuantity += item.quantity;
         }
       });
       return { ...state, totalPrice: total, totalQuantity };

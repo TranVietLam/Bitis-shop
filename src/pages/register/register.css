@@ -1,143 +1,114 @@
-
-/* header */
-.register-title {
-  width: 100%;
-  float: left;
-  margin-top: 15px;
-  margin-bottom: 10px;
-  font-size: 20px;
-  font-weight: 500;
-}
-
-.box-register-content-left {
-  width: 780px;
-  margin: auto;
-  padding: 0 83px 0px 50px;
-}
-
-/* container */
-.box-register {
-  background-color: #fff;
-  display: flex;
-  flex-direction: column;
-  max-height: 100%;
-  padding: 20px 10px;
-  margin-bottom: 20px;
-}
-
-.box-register-form::after {
-  content: "";
-  display: block;
-  clear: both;
-}
-
-/* form */
-
-form {
-  display: block;
-  margin-top: 0em;
-}
-
-.form-group {
-  width: 100%;
-  float: left;
-  margin-bottom: 15px;
-}
-
-.form-group label {
-  width: 132px;
-  float: left;
-  font-size: 14px;
-  line-height: 35px;
-  font-weight: 500;
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* input */
-
-.sex-input {
-  display: inline-block;
-  margin-right: 5px;
-  position: relative;
-  top: 2px;
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #00294b;
 }
 
-.female {
-  margin-left: 20px;
+.register {
+  background-color: #00294b;
+  padding: 40px;
+  border-radius: 20px;
+  border: 8px solid #ff7d00;
 }
 
-.label-for {
-  width: calc(100% - 132px);
-  float: right;
-  line-height: 35px;
+.register-container .form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 25px;
 }
 
-.inputText {
-  width: 100%;
-  float: left;
-  padding: 0 10px;
-  height: 35px;
-  line-height: 35px;
-  border-radius: 3px;
-  border: 1px solid #acacac;
-  background: #faf9f9;
-}
-
-.submit-register {
-  width: 132px;
-  float: left;
-  text-align: center;
-  line-height: 37px;
-  font-size: 18px;
+.register-container .form h2 {
+  color: #ff7d00;
   font-weight: 500;
-  text-transform: uppercase;
-  color: #fff;
-  background: #29a07e;
-  border-radius: 3px;
+  letter-spacing: 0.1em;
+}
+
+.register-container .form .inputBox {
+  position: relative;
+  width: 300px;
+}
+
+.register-container .form .inputBox input {
+  padding: 12px 10px 12px 48px;
   border: none;
-}
-
-/* select */
-.label-for select {
   width: 100%;
-  float: left;
-  padding: 0px 10px;
-  height: 35px;
-  line-height: 35px;
-  border-radius: 3px;
-  border: solid 1px #acacac;
-  background: #faf9f9;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  font-weight: 300;
+  border-radius: 25px;
+  font-size: 1em;
+  box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.35);
+  transition: 0.5s;
+  outline: none;
 }
 
-.select-birthday,
-.select-month {
-  width: 100px;
-  float: left;
-  margin-right: 10px;
-  padding: 0px 10px;
-  height: 35px;
-  line-height: 35px;
-  border-radius: 3px;
-  border: solid 1px #acacac;
-  background: #faf9f9;
+.register-container .form .inputBox span {
+  position: absolute;
+  left: 0;
+  padding: 12px 10px 12px 48px;
+  pointer-events: none;
+  font-size: 1em;
+  font-weight: 300;
+  transition: 0.5s;
+  border-radius: 25px;
+  letter-spacing: 0.05em;
+  color: #00294b;
 }
 
-.select-year {
-  width: 100px;
-  float: left;
-  padding: 0px 10px;
-  height: 35px;
-  line-height: 35px;
-  border-radius: 3px;
-  border: solid 1px #acacac;
-  background: #faf9f9;
+.register-container .form .inputBox input:valid ~ span,
+.register-container .form .inputBox input:focus ~ span {
+  color: #00294b;
+  background: #ff7d00;
+  border: 1px solid #00294b;
+  transform: translateX(25px) translateY(-7px);
+  font-size: 0.8em;
+  padding: 0 8px;
+  border-radius: 10px;
+  letter-spacing: 0.1em;
 }
 
-/* responsive */
+.register-container .form .inputBox input:valid,
+.register-container .form .inputBox input:focus {
+  border: 1px solid #00294b;
+}
+.register-container .form .inputBox i {
+  position: absolute;
+  top: 15px;
+  left: 16px;
+  width: 25px;
+  padding: 2px 0;
+  padding-right: 8px;
+  color: #00294b;
+  border-right: 1px solid #00294b;
+}
 
-@media (min-width: 320px) and (max-width: 425px) {
-  .form-group {
-    display: flex;
-    flex-direction: column;
-  }
+.register-container .form .inputBox input[type="submit"] {
+  background-color: #ff7d00;
+  color: #00294b;
+  padding: 10px 0;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.35);
+}
+
+.register-container .form p {
+  color: #fff;
+  font-size: 0.9em;
+  font-weight: 300;
+}
+
+.register-container .form p a {
+  font-weight: 500;
+  color: #ff7d00;
 }

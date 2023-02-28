@@ -26,11 +26,11 @@ const Footer = () => {
                 </a>
               </p>
               <p className="footer-address-item">
-                <i className="icon-phone"></i>
+                <i className="icon-phone-footer"></i>
                 <a href="tel:0879259755">0879259755</a>
               </p>
               <p className="footer-address-item">
-                <i className="icon-email"></i>
+                <i className="icon-email-footer"></i>
                 <a href="mailto:tranvietlam25051998@gmail.com">
                   tranvietlam25051998@gmail.com
                 </a>
@@ -161,20 +161,30 @@ const Footer = () => {
               <p className="footer-title">FANPAGE FACEBOOK</p>
               <div className="footer-info-list">
                 <iframe
+                  src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fbitisthustore&tabs=timeline&width=340&height=331&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=859048041869581"
+                  width="340"
+                  height="331"
+                  style={{ border: "none", overflow: "hidden" }}
+                  scrolling="no"
+                  frameBorder="0"
+                  allowFullScreen
+                  allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                />
+                {/* <iframe
                   title="fanpage"
                   src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fbitisthustore&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=492715174604716"
                   allowFullScreen={true}
                   allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-                />
+                /> */}
               </div>
             </div>
           </div>
         </div>
       </div>
       <div className="container footer-end">
-      © 2022 Cửa Hàng Bitis's Thu <br/>
-      Địa chỉ : 47/5 Khu Phố 5B, Phường Tân Biên, Biên Hòa, Đồng Nai <br/>
-      GPDKKD số 47A8080472 do UBND TP.Biên Hòa cấp ngày 04/10/2022
+        © 2022 Cửa Hàng Bitis's Thu <br />
+        Địa chỉ : 47/5 Khu Phố 5B, Phường Tân Biên, Biên Hòa, Đồng Nai <br />
+        GPDKKD số 47A8080472 do UBND TP.Biên Hòa cấp ngày 04/10/2022
       </div>
     </>
   );

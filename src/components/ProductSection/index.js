@@ -31,7 +31,7 @@ const ProductSection = () => {
             </a>
           </div>
         </div>
-        <div className="product-container">
+        <div className="sale-product-container">
           <SaleSlider />
         </div>
         <a href="/" className="btn-moredetail">

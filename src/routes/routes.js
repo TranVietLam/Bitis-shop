@@ -6,7 +6,6 @@ import ProductDetail from "./../pages/productDetail/productDetail";
 import Cart from "../pages/cart/cart";
 import Error from "./../pages/error/error";
 import Login from "./../pages/login/login";
-import Register from "../pages/register/register";
 
 const routes = [
   { path: "", component: <Home /> },
@@ -17,7 +16,6 @@ const routes = [
   { path: "/products/:id", component: <ProductDetail /> },
   { path: "/cart", component: <Cart /> },
   { path: "/login", component: <Login /> },
-  { path: "/register", component: <Register /> },
   { path: "*", component: <Error /> },
 ];
 

@@ -1,21 +1,40 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 import "./productDetail.css";
 import Breadcrumb from "./../../components/BreadcrumbTitle/index";
+import ProductGallery from "../../components/ProductGallery";
+
+const dataProduct = [
+  {
+    image:
+      "https://lacdau.com/media/product/250-1382-6d2d77ddcf570fb9b77173c844e0d945.png",
+    name: "keycap",
+  },
+
+  {
+    image:
+      "https://lacdau.com/media/product/75-1382-bb6287083f281f624cf3e3898213b450.jpg",
+    name: "keycap",
+  },
+
+  {
+    image:
+      "https://lacdau.com/media/product/250-1382-0b7113807178b8848ba1ca97ca24b58d.jpg",
+    name: "keycap",
+  },
+];
 
 const ProductDetail = () => {
+  const { id } = useParams();
   return (
     <>
       <Breadcrumb page="Chi tiết sản phẩm" />
       <div className="product-detail-container container">
         <div className="pd-info-group pd-box-group bg-white d-flex">
           <div className="pd-box-left">
-            <div className="big-image-holder">
-              <img
-                src="https://lacdau.com/media/product/250-1382-6d2d77ddcf570fb9b77173c844e0d945.png"
-                alt="keycap"
-              />
+            <div className="pd-img-gallery">
+              <ProductGallery dataProduct={dataProduct} />
             </div>
-            <div className="pd-img-gallery">{/* carousel in here */}</div>
           </div>
           <div className="pd-box-middle">
             <h1 className="pd-name">BỘ KEYCAP AKKO BILIBILI PBT SUBLIMATION</h1>

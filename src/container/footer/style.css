@@ -59,7 +59,7 @@
   height: 20px;
 }
 
-.icon-phone {
+.icon-phone-footer {
   background: url(../../Assets/images/social-icons/sprite.png) no-repeat center;
   background-size: 290px;
   background-position: -261px -37px;
@@ -67,7 +67,7 @@
   height: 20px;
 }
 
-.icon-email {
+.icon-email-footer {
   background: url(../../Assets/images/social-icons/sprite.png) no-repeat center;
   background-size: 290px;
   background-position: -261px -67px;
@@ -162,5 +162,11 @@
 
   .footer-end {
     height: 150px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1025px) {
+  .icon-email-footer {
+    min-width: 30px;
   }
 }

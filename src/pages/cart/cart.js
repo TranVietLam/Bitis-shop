@@ -11,6 +11,7 @@ import {
 } from "../../redux/actions/actions";
 import { numberWithCommas } from "./../../Utils/index";
 import ModalConfirm from "../../components/ModalConfirmDeleteProd";
+import { deleteAllProduct } from "./../../redux/actions/actions";
 
 const Cart = () => {
   // input
@@ -61,6 +62,10 @@ const Cart = () => {
     setInfoProdForRemove(infoProduct);
   };
 
+  const handleRemoveAllProducts = (infoProduct) => {
+    setShow(true);
+  };
+
   const quantityPlus = (item) => {
     dispatch(onAddToCart(item));
   };
@@ -85,6 +90,7 @@ const Cart = () => {
         handleConfirm={() => {
           dispatch(deleteProduct(infoProdForRemove));
           setShow(false);
+          dispatch(deleteAllProduct());
         }}
       />
       <Breadcrumb page="Thông tin giỏ hàng" />
@@ -99,10 +105,7 @@ const Cart = () => {
                   <i className="bi bi-caret-left-fill"></i>
                   CHỌN TIẾP SẢN PHẨM KHÁC
                 </Link>
-                <button
-                  type="button"
-                  onClick={() => handleRemoveProducts()}
-                >
+                <button type="button" onClick={() => handleRemoveAllProducts()}>
                   {" "}
                   XÓA GIỎ HÀNG{" "}
                 </button>

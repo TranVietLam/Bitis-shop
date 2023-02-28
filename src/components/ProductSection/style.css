@@ -38,7 +38,8 @@
   margin: 0 auto 16px auto;
 }
 
-.box-title-group a:first-child:after {
+
+.box-title-group a:nth-child(1):after {
   content: "";
   width: 1px;
   height: 14px;

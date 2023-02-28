@@ -187,54 +187,63 @@ const Header = () => {
                 </NavLink>
                 {/* cart hover */}
                 <div className="header-cart-hover">
-                  <div className="cart-items-holder">
-                    {dataCart.product.map((item, id) => (
-                      <div key={id}>
-                        <div className="cart-item">
-                          <Link to="/cart" className="cart-img">
-                            <img src={item.image} alt="images" />
-                          </Link>
-                          <div className="cart-text">
-                            <Link
-                              to="cart"
-                              className="d-block font-700 cart-name"
-                            >
-                              {item.name}
-                            </Link>
-                            <p className="m-0 d-flex justify-content-between">
-                              <b onChange={(e) => onChangeQuantity(e, item)}>
-                                x{item.quantity}
-                              </b>
-                              <b className="text-danger fw-semibold fs-6">
-                                {numberWithCommas(item.price)} đ
-                              </b>
-                            </p>
+                  {dataCart.product.length === 0 && (
+                    <div className="text-center p-4 fw-bold fs-6">Có 0 sản phẩm trong giỏ hàng</div>
+                  )}
+                  {dataCart.product.length > 0 && (
+                    <>
+                      <div className="cart-items-holder">
+                        {dataCart.product.map((item, id) => (
+                          <div key={id}>
+                            <div className="cart-item">
+                              <Link to="/cart" className="cart-img">
+                                <img src={item.image} alt="images" />
+                              </Link>
+                              <div className="cart-text">
+                                <Link
+                                  to="cart"
+                                  className="d-block font-700 cart-name"
+                                >
+                                  {item.name}
+                                </Link>
+                                <p className="m-0 d-flex justify-content-between">
+                                  <b
+                                    onChange={(e) => onChangeQuantity(e, item)}
+                                  >
+                                    x{item.quantity}
+                                  </b>
+                                  <b className="text-danger fw-semibold fs-6">
+                                    {numberWithCommas(item.price)} đ
+                                  </b>
+                                </p>
+                              </div>
+                            </div>
                           </div>
-                        </div>
+                        ))}
                       </div>
-                    ))}
-                  </div>
-                  <div className="cart-price-holder">
-                    <p className="text-secondary font-400 m-0 text-end">
-                      Tổng tiền hàng
-                      <span className="text-danger">
-                        (
-                        <span className="cart-counts text-danger me-1">
-                          {dataCart.product.length}
-                        </span>
-                        sản phẩm):
-                      </span>
-                      <span className="text-danger text-18 fw-semibold mx-2 fs-5">
-                        {numberWithCommas(dataCart.totalPrice)} đ
-                      </span>
-                    </p>
-                    <Link
-                      to="/cart"
-                      className="d-block text-center text-white btn-goCart"
-                    >
-                      THANH TOÁN NGAY
-                    </Link>
-                  </div>
+                      <div className="cart-price-holder">
+                        <p className="text-secondary font-400 m-0 text-end">
+                          Tổng tiền hàng
+                          <span className="text-danger">
+                            (
+                            <span className="cart-counts text-danger me-1">
+                              {dataCart.product.length}
+                            </span>
+                            sản phẩm):
+                          </span>
+                          <span className="text-danger text-18 fw-semibold mx-2 fs-5">
+                            {numberWithCommas(dataCart.totalPrice)} đ
+                          </span>
+                        </p>
+                        <Link
+                          to="/cart"
+                          className="d-block text-center text-white btn-goCart"
+                        >
+                          THANH TOÁN NGAY
+                        </Link>
+                      </div>
+                    </>
+                  )}
                 </div>
               </div>
             </div>
