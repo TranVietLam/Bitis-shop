@@ -6,6 +6,7 @@ import {
   QUANTITY_MINUS,
 } from "../actions/actionTypes";
 
+import { hideLoading, showLoading } from "react-redux-loading-bar";
 const initProduct = {
   product: [],
   totalPrice: 0,

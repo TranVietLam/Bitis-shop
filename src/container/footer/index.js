@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-import Logo from "../../Assets/images/logo.png";
+import Logo from "../../Assets/images/Logo/logo.png";
 
 //acordition
 import Accordion from "react-bootstrap/Accordion";
@@ -8,7 +8,7 @@ import Accordion from "react-bootstrap/Accordion";
 const Footer = () => {
   return (
     <>
-      <div className="footer-info-group bg-white mt-4 mb-2">
+      <div className="footer-info-group mt-4 mb-2">
         <div className="container">
           <div className="row">
             <div className="col-lg-3 col-sm-12">

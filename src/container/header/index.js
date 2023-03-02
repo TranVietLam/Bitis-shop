@@ -1,6 +1,6 @@
 import "./header.css";
 import React from "react";
-import Logo from "../../Assets/images/logo.png";
+import Logo from "../../Assets/images/Logo/logo.png";
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 
@@ -163,16 +163,16 @@ const Header = () => {
               <div className="header-right-item">
                 <i className="icon-phones ringing me-3 bi bi-telephone-forward" />
                 <a href="tel:0879259755" className="text font-700">
-                  <div className="font-400 me-2 text-black">Hotline</div>
+                  <div className="fw-bold me-2 text-black">Hotline</div>
                   <b>0879.259.755</b>
                 </a>
               </div>
               <div className="header-right-item">
-                <i className="icons bi bi-lightning" />
+                <i className="icon-lightning bi bi-lightning-fill" />
                 <a
                   href="https://www.messenger.com/t/100044646572165"
                   target="_blank"
-                  className="advise-mess"
+                  className="advise-mess fw-bold"
                   rel="noopener noreferrer"
                 >
                   Tư vấn trực tiếp

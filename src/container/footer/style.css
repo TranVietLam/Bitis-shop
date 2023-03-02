@@ -1,3 +1,7 @@
+.footer-info-group {
+  background-color: #fff;
+}
+
 .footer-info-group a {
   color: #000;
   text-decoration: none;
@@ -5,7 +9,7 @@
 
 .footer-info-group a:hover {
   cursor: pointer;
-  color: #29a07e;
+  color: var(--orange-color);
 }
 
 .footer-info-item {

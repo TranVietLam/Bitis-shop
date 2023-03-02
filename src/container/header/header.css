@@ -15,13 +15,14 @@
   right: 0;
   left: 0;
   z-index: 1030;
-  background-color: #fff;
+  background: #fff;
+  box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 5%);
 }
 
 .fixed-top.active {
   top: -45px;
-  background-color: white;
-  box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+  background: #fff;
+  box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 25%);
 }
 
 small {
@@ -32,13 +33,13 @@ small {
 }
 
 .middle-title-text {
-  color: #f65005;
+  color: #C06014;
 }
 
 .top-bar {
   height: 45px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.07);
-  background-color: #29a07e;
+  background-color: #100F0F;
   color: #fff;
 }
 
@@ -46,6 +47,7 @@ small {
 .contact-address,
 .hotline-support {
   cursor: pointer;
+  color: #FCF8E8;
 }
 
 .contact-address-holder::before {
@@ -174,6 +176,7 @@ small {
 
 /* Under Header */
 
+
 .cart-amount,
 i.cart:before {
   border-radius: 50%;
@@ -203,7 +206,7 @@ i.cart:before {
 
 .logo-store img {
   width: 145px;
-  height: 60px;
+  height: 100px;
 }
 
 /* menu-list */
@@ -224,10 +227,10 @@ i.cart:before {
 .header-menu-group .header-menu-title {
   line-height: 42px;
   margin: 0;
-  background: #29a07e;
+  background: var(--black-color);
   border-radius: 10px;
-  color: #fff;
-  font-weight: 600;
+  color: var(--orange-color);
+  font-weight: 700;
   padding: 0 6px;
   text-transform: uppercase;
   cursor: pointer;
@@ -309,11 +312,11 @@ a.text-hotline {
 
 .header-right-item a {
   text-decoration: none;
-  color: #29a07e;
+  color: var(--orange-color);
 }
 
 .header-right-item a:hover {
-  color: #29a07e;
+  color: var(--orange-color);
 }
 
 .header-right-item span {
@@ -322,8 +325,7 @@ a.text-hotline {
 
 .header-right-item.item-cart {
   position: relative;
-  background: #fff;
-  box-shadow: 0 0 0 1px #29a07e;
+  box-shadow: 0 0 0 2px var(--black-color);
   border-radius: 10px;
   text-align: center;
   cursor: pointer;
@@ -334,19 +336,19 @@ a.text-hotline {
 }
 
 .header-right-item span.cart-count {
-  background: #ffbf42;
+  background: var(--black-color);
   width: 18px;
   height: 18px;
-  line-height: 16px;
+  line-height: 17px;
   font-weight: 500;
   border-radius: 50%;
-  color: #000;
+  color: var(--orange-color);
   text-align: center;
   font-style: normal;
   position: absolute;
   top: 7px;
   right: 115px;
-  font-size: 16px;
+  font-size: 14px;
 }
 /* Cart holder */
 
@@ -446,6 +448,7 @@ a.cart-name:hover {
 a.advise-mess,
 a.cart {
   color: #000;
+  font-weight: bold;
 }
 
 .icon-cart {
@@ -455,8 +458,13 @@ a.cart {
 }
 
 .icon-phones {
-  color: #29a07e;
+  color: var(--orange-color);
   display: inline-block;
+  font-size: 24px;
+}
+
+.icon-lightning {
+  color: var(--orange-color);
   font-size: 24px;
 }
 
@@ -531,11 +539,11 @@ a.cart {
 @media (min-width: 320px) and (max-width: 426px) {
   /* header */
   .fixed-top, .fixed-top.active {
-    background-color: #29A07E;
+    background: linear-gradient(270deg, #ff7d00 2.54%, #ffc34e 86.96%);
   }
 
   .header-right-item a {
-    color: #fff;
+    color: var(--black-color);
   }
   
   .logo-store {
@@ -547,6 +555,7 @@ a.cart {
   .logo-store img {
     width: 60px;
     max-width: 60px;
+    height: 60px;
   }
   .header-menu-group {
     display: none;
@@ -605,10 +614,10 @@ a.cart {
 @media (min-width: 426px) and (max-width: 769px) {
   /* header */
   .fixed-top {
-    background: #29A07E;
+    background: linear-gradient(270deg, #ff7d00 2.54%, #ffc34e 86.96%);
   }
   .fixed-top.active {
-    background-color: #29A07E;;
+    background: linear-gradient(270deg, #ff7d00 2.54%, #ffc34e 86.96%);
   }
 
   /* under header */
@@ -662,6 +671,7 @@ a.cart {
   .logo-store img {
     width: 75px;
     max-width: 75px;
+    height: 68px;
   }
 
   .header-search-group {

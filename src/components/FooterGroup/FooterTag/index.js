@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const FooterTag = () => {
   return (
     <>
-      <div className="footer-tag-group bg-white d-flex align-items-center flex-wrap">
+      <div className="footer-tag-group d-flex align-items-center flex-wrap">
         <b>Tìm hiểu thêm : </b>
         <Link to="/">
           <i className="bi bi-record2" />

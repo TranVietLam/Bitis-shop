@@ -14,6 +14,9 @@ import { BrowserRouter } from "react-router-dom";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+//loading bar
+import LoadingBar from "react-redux-loading-bar";
+
 // redux
 import { Provider } from "react-redux";
 import { createStore } from "redux";
@@ -24,7 +27,14 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <Provider store={store}>
+      <Provider store={store} Loading={null}>
+        <div className="position-absolute w-100" style={{ zIndex: 100 }}>
+          <LoadingBar
+            updateTime={100}
+            className="bg-danger"
+            style={{ height: "10px" }}
+          />
+        </div>
         <App />
       </Provider>
     </BrowserRouter>
