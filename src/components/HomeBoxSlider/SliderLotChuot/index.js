@@ -8,6 +8,7 @@ import { useDispatch } from "react-redux";
 import { onAddToCart } from "../../../redux/actions/actions";
 import ModalSuccess from "../../ModalSuccess";
 
+
 const SliderLotChuot = () => {
   //modal
   const [show, setShow] = useState(false);

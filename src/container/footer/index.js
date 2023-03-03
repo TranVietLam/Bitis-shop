@@ -181,7 +181,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="container footer-end">
+      <div className="container footer-end mb-5">
         © 2022 Cửa Hàng Bitis's Thu <br />
         Địa chỉ : 47/5 Khu Phố 5B, Phường Tân Biên, Biên Hòa, Đồng Nai <br />
         GPDKKD số 47A8080472 do UBND TP.Biên Hòa cấp ngày 04/10/2022

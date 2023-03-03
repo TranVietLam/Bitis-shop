@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap');
+
+.modal-header {
+    background: var(--black-color);
+    justify-content: center;
+    font-family: 'Tilt Warp', cursive;
+}
+
+.modal-header p {
+    color: var(--orange-color);
+}

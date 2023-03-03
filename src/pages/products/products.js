@@ -2,6 +2,7 @@ import React from "react";
 import "./products.css";
 import Breadcrumb from "./../../components/BreadcrumbTitle/index";
 import { Link } from "react-router-dom";
+import ProductsCard from "../../components/ProductsComponents/ProductsCard";
 
 const Products = () => {
   return (
@@ -191,25 +192,16 @@ const Products = () => {
             </div>
             <div className="product-container">
               <div className="product-item">
-                <Link to="/" className="product-img">
-                  <img
-                    src="https://lacdau.com/media/product/250-607-4e4147f80c0070f1087777b70aca74bd.jpg"
-                    alt="dareu"
-                  />
-                </Link>
-                <div className="product-text">
-                  <div className="d-flex align-items-center justify-content-between">
-                    <p className="product-code">Mã: PADDR0003</p>
-                    <p className="product-qty conhang">Còn hàng </p>
-                  </div>
-                  <Link to="/" className="product-name">
-                    <h3>PAD 33 DAREU ESP101 5MM HỒNG</h3>
-                  </Link>
-                  <div className="product-price-container">
-                    <span className="product-price">55.000đ</span>
-                    <button className="product-btn-cart"></button>
-                  </div>
-                </div>
+                <ProductsCard />
+              </div>
+              <div className="product-item">
+                <ProductsCard />
+              </div>
+              <div className="product-item">
+                <ProductsCard />
+              </div>
+              <div className="product-item">
+                <ProductsCard />
               </div>
             </div>
           </div>
