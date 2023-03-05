@@ -184,22 +184,9 @@ const Products = () => {
                   <option value={4}>Đánh giá</option>
                   <option value={5}>Tên A-Z</option>
                 </select>
-                {/* <div className="display-group">
-                  <a href="/" className="icons-product icon-grid active" />
-                  <a href="/" className="icons-product icon-list " />
-                </div> */}
               </div>
             </div>
             <div className="product-container">
-              <div className="product-item">
-                <ProductsCard />
-              </div>
-              <div className="product-item">
-                <ProductsCard />
-              </div>
-              <div className="product-item">
-                <ProductsCard />
-              </div>
               <div className="product-item">
                 <ProductsCard />
               </div>

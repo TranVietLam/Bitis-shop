@@ -16,7 +16,8 @@ const NavbarTablet = () => {
       id: 2,
       icon: "under-nav-icon bi bi-list-ul",
       label: "Danh Mục",
-      type: "modal",
+      type: "link",
+      url : "/products"
     },
     {
       id: 3,
@@ -30,7 +31,7 @@ const NavbarTablet = () => {
       icon: "under-nav-icon bi bi-person-circle",
       label: "Tài Khoản",
       type: "link",
-      url: "/products",
+      url: "/login",
     },
   ];
   const [indexActive, setActive] = useState(0);
@@ -74,31 +75,6 @@ const NavbarTablet = () => {
                 </div>
               </li>
             ))}
-            {/*             
-            <li className="navbar-list">
-              <Link to="/home">
-                <span className="navbar-icon">
-                  <i className="under-nav-icon bi bi-list-ul"></i>
-                </span>
-                <span className="navbar-text">Danh Mục</span>
-              </Link>
-            </li>
-            <li className="navbar-list">
-              <a href="tel:0879259755">
-                <span className="navbar-icon">
-                  <i className="bi bi-telephone"></i>
-                </span>
-                <span className="navbar-text">Hotline</span>
-              </a>
-            </li>
-            <li className="navbar-list">
-              <Link to="/home">
-                <span className="navbar-icon">
-                  <i className="under-nav-icon bi bi-person-circle"></i>
-                </span>
-                <span className="navbar-text">Tài Khoản</span>
-              </Link>
-            </li> */}
             <div className="indicator"></div>
           </ul>
         </div>
