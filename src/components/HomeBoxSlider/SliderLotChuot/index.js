@@ -1,17 +1,18 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import "./style.css";
 import Slider from "react-slick";
-import DataLotChuot from "../../../DataLotChuot/index";
+// import DataLotChuot from "../../../DataLotChuot/index";
 import { numberWithCommas } from "../../../Utils";
 //redux
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { onAddToCart } from "../../../redux/actions/actions";
 import ModalSuccess from "../../ModalSuccess";
+
 const settings = {
-  dots: true,
+  dots: false,
   infinite: false,
   speed: 1000,
-  slidesToShow: 4,
+  slidesToShow: 6,
   slidesToScroll: 1,
   initialSlide: 0,
   swipeToSlide: true,
@@ -45,27 +46,11 @@ const settings = {
     },
   ],
 };
-const SliderLotChuot = () => {
+const SliderLotChuot = ({ data = [] }) => {
   //modal
   const [show, setShow] = useState(false);
-  const [dataProducts, setDataProducts] = useState([]);
-  const isDidMount = useRef(null);
-  useEffect(() => {
-    // api
-    console.log("willDidMount");
-    if (isDidMount.current) {
-      console.log("didmount");
-      fetch("https://5e1fc92ee31c6e0014c6000e.mockapi.io/api/product")
-        .then((response) => response.json())
-        .then((data) => {
-          if (Array.isArray(data) && data.length > 0) {
-            setDataProducts(data);
-          }
-        });
-    } else {
-      isDidMount.current = true;
-    }
 
+  useEffect(() => {
     //modal show
     const interval = setInterval(() => {
       setShow(false);
@@ -80,11 +65,16 @@ const SliderLotChuot = () => {
     setShow(true);
   };
 
+  const { dataLotChuot } = useSelector((state) => {
+    return {
+      dataLotChuot: state.productsList.products,
+    };
+  });
   return (
     <>
       <ModalSuccess show={show} />
       <Slider {...settings}>
-        {dataProducts.map((item, id) => (
+        {dataLotChuot.map((item, id) => (
           <div key={id} className="slider-item">
             <a
               href="/"

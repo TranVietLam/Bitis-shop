@@ -6,7 +6,6 @@ import {
   QUANTITY_MINUS,
 } from "../actions/actionTypes";
 
-import { hideLoading, showLoading } from "react-redux-loading-bar";
 const initProduct = {
   product: [],
   totalPrice: 0,
@@ -22,13 +21,11 @@ const cartReducer = (state = initProduct, action) => {
       if (indexOfProduct > -1) {
         state.product[indexOfProduct].quantity += 1;
         state.product[indexOfProduct].totalPrice =
-          Number(state.product[indexOfProduct].price.replace("", "")) *
-          Number(state.product[indexOfProduct].quantity);
+          action.payload.price * action.payload.quantity;
       } else {
         action.payload.quantity = 1;
         action.payload.totalPrice =
-          Number(action.payload.price.replace("$", "")) *
-          Number(action.payload.quantity);
+          action.payload.price * action.payload.quantity;
         state.product.push(action.payload);
       }
       let total = 0;

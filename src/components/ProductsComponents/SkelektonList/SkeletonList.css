@@ -1,0 +1,15 @@
+.skeleton-item {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.skeleton-main {
+  width: calc(100% / 5 + 30px);
+  margin: 0 18px 14px 0;
+  border-radius: 15px;
+}
+
+.card-body {
+  padding: 0 !important;
+}

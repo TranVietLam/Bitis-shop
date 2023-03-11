@@ -424,6 +424,15 @@
 .cart-btn-buy button:first-child:hover {
   background: #279072;
 }
+
+.cart-noneProducts {
+  background-color: #fff;
+  padding: 100px 0;
+  font-weight: 600;
+  font-size: 24px;
+  margin-top: 0.5rem;
+  padding-left: 1rem;
+}
 /* latop small screen */
 @media (min-width: 769px) and (max-width: 1024px) {
   .customer-left {

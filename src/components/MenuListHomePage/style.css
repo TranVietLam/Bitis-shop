@@ -1,5 +1,4 @@
 .homepage-menu-list {
-  width: 240px;
   height: 100%;
   background: #fff;
   border-radius: 20px;
@@ -28,3 +27,57 @@
   align-items: center;
 }
   
+
+.cat-thum {
+  width: 24px;
+  height: 24px;
+  margin-right: 20px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  filter: brightness(0);
+}
+
+.lot-chuot {
+  background-image: url(../../Assets/images/icon-img/lot-chuot.png);
+}
+
+.gaming-gear {
+  background-image: url(../../Assets/images/icon-img/gaming-gear.png);
+}
+
+.phu-kien {
+  background-image: url(../../Assets/images/icon-img/phu-kien.png);
+}
+
+.mo-hinh {
+  background-image: url(../../Assets//images/icon-img/mo-hinh.png);
+}
+
+.trang-tri {
+  background-image: url(../../Assets/images/icon-img/trang-tri.png);
+}
+
+.loa-micro {
+  background-image: url(../../Assets//images/icon-img/loa-micro.png);
+}
+
+.ghe-gaming {
+  background-image: url(../../Assets/images/icon-img/ghe-gaming.png);
+}
+
+.ban-gaming {
+  background-image: url(../../Assets/images/icon-img/ban-gaming.png);
+}
+
+.usb {
+  background-image: url(../../Assets/images/icon-img/usb.png);
+}
+
+.tan-nhiet {
+  background-image: url(../../Assets/images/icon-img/tan-nhiet.png);
+}
+
+.phu-kien {
+  background-image: url(../../Assets/images/icon-img/phukien-dienthoai.png);
+}

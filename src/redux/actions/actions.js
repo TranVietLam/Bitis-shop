@@ -1,4 +1,4 @@
-import { BUY_PRODUCT, DELETE_PRODUCT, DELETE_ALL_PRODUCT, LOAD_DATA_LS, QUANTITY_MINUS } from "./actionTypes"
+import { BUY_PRODUCT, DELETE_PRODUCT, DELETE_ALL_PRODUCT, LOAD_DATA_LS, QUANTITY_MINUS, FETCH_API } from "./actionTypes"
 
 export const onAddToCart = (infoProduct) => {
     return {
@@ -33,3 +33,12 @@ export const minusQuantity = (infoProduct) => {
         payload : infoProduct,
     }
 }
+
+export const fectApi = (infoProducts) => {
+    return {
+        type: FETCH_API,
+        payload: infoProducts,
+    }
+}
+
+

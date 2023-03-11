@@ -11,7 +11,7 @@ import BannerRight3 from "../../Assets/images/banner/Banner-right3.png";
 import BannerUnder1 from "../../Assets/images/banner/Banner-under1.png";
 import BannerUnder2 from "../../Assets/images/banner/Banner-under2.png";
 import BannerUnder3 from "../../Assets/images/banner/Banner-under3.png";
-import MenuListHomePage from './../MenuListHomePage/index';
+import MenuListHomePage from "./../MenuListHomePage/index";
 
 const BannerHomePage = () => {
   return (

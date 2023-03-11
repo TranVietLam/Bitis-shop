@@ -4,6 +4,7 @@ import "./style.css";
 import SliderLotChuot from "../../components/HomeBoxSlider/SliderLotChuot/index";
 
 const HomeBoxSlider = () => {
+
   return (
     <>
       <div className="container home-box-group">
@@ -41,7 +42,7 @@ const HomeBoxSlider = () => {
           </div>
         </div>
         <div className="slider-container">
-          <SliderLotChuot />
+          <SliderLotChuot/>
         </div>
       </div>
     </>

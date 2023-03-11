@@ -1,13 +1,46 @@
-import React from "react";
+import React, { useState } from "react";
 import "./products.css";
 import Breadcrumb from "./../../components/BreadcrumbTitle/index";
-import { Link } from "react-router-dom";
 import ProductsCard from "../../components/ProductsComponents/ProductsCard";
+import SkeletonList from "../../components/ProductsComponents/SkelektonList/SkeletonList";
+import { useSelector } from "react-redux";
+import CustomizePagination from "./../../components/Pagination/index";
 
 const Products = () => {
+  const { data, pagination } = useSelector((state) => {
+    return {
+      data: state.productsList.products,
+      pagination: state.dataPagination,
+    };
+  });
+  // Limit Pagination
+
+  //pagination
+  const dataProducts = [];
+  data.forEach((item, index) => {
+    if (
+      index >= (pagination.page - 1) * pagination.limit &&
+      index < pagination.page * pagination.limit
+    ) {
+      dataProducts.push(item);
+    }
+    // page 1 : 0 - 11,
+    // page 2 : 12 - 23,
+    // page 3 : 24 - 35,
+    // page 4 : 36 - 47,
+  });
+
+  // skeleton loading
+  const [loading, setLoading] = useState(false);
+  if (loading === true) {
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+  }
+
   return (
     <>
-      <Breadcrumb page="Lót chuột" />
+      <Breadcrumb page="sản phẩm" />
       <div className="product-page container">
         <div className="col-left">
           <div className="product-filter-container">
@@ -16,15 +49,15 @@ const Products = () => {
               <div className="product-filter-list">
                 <a href="/">
                   <i className="icon-square"></i>
-                  <span className="filter-title">DAREU</span>
+                  <span className="filter-title">BITIS</span>
                 </a>
                 <a href="/">
                   <i className="icon-square"></i>
-                  <span className="filter-title">E-DRA</span>
+                  <span className="filter-title">BITAS</span>
                 </a>
                 <a href="/">
                   <i className="icon-square"></i>
-                  <span className="filter-title">LẮC ĐẦU</span>
+                  <span className="filter-title">THÁI</span>
                 </a>
               </div>
             </div>
@@ -33,124 +66,96 @@ const Products = () => {
               <div className="product-filter-list">
                 <a href="/">
                   <i className="icon-square"></i>
-                  <span className="filter-title">Dưới 100 ngàn</span>
+                  <span className="filter-title">Dưới 500 ngàn</span>
                 </a>
                 <a href="/">
                   <i className="icon-square"></i>
-                  <span className="filter-title">100 ngàn - 200 ngàn</span>
+                  <span className="filter-title">500 ngàn - 1.000.000</span>
                 </a>
                 <a href="/">
                   <i className="icon-square"></i>
-                  <span className="filter-title">200 ngàn - 500 ngàn</span>
-                </a>
-              </div>
-            </div>
-            <div className="filter-item">
-              <p className="product-filter-title">ĐỘ DÀY LÓT CHUỘT</p>
-              <div className="product-filter-list">
-                <a href="/">
-                  <i className="icon-square"></i>
-                  <span className="filter-title">DÀY 4MM</span>
-                </a>
-                <a href="/">
-                  <i className="icon-square"></i>
-                  <span className="filter-title">DÀY 3MM</span>
-                </a>
-                <a href="/">
-                  <i className="icon-square"></i>
-                  <span className="filter-title">DÀY 5MM</span>
-                </a>
-                <a href="/">
-                  <i className="icon-square"></i>
-                  <span className="filter-title">DÀY 2MM</span>
+                  <span className="filter-title">Trên 1.000.000</span>
                 </a>
               </div>
             </div>
             <div className="filter-item">
-              <p className="product-filter-title">CHỦ ĐỀ LÓT CHUỘT</p>
+              <p className="product-filter-title">LOẠI GIÀY</p>
               <div className="product-filter-list">
                 <a href="/">
                   <i className="icon-square"></i>
-                  <span className="filter-title">DRAGON BALL</span>
+                  <span className="filter-title">GIÀY NAM</span>
                 </a>
                 <a href="/">
                   <i className="icon-square"></i>
-                  <span className="filter-title">GUNDAM</span>
+                  <span className="filter-title">GIÀY NỮ</span>
                 </a>
                 <a href="/">
                   <i className="icon-square"></i>
-                  <span className="filter-title">CARTOON</span>
+                  <span className="filter-title">GIÀY TRẺ EM</span>
                 </a>
                 <a href="/">
                   <i className="icon-square"></i>
-                  <span className="filter-title">DC COMICS</span>
-                </a>
-                <a href="/">
-                  <i className="icon-square"></i>
-                  <span className="filter-title">NARUTO</span>
-                </a>
-                <a href="/">
-                  <i className="icon-square"></i>
-                  <span className="filter-title">VALORANT</span>
-                </a>
-                <a href="/">
-                  <i className="icon-square"></i>
-                  <span className="filter-title">PUBG</span>
-                </a>
-                <a href="/">
-                  <i className="icon-square"></i>
-                  <span className="filter-title">CYPER PUNK</span>
-                </a>
-                <a href="/">
-                  <i className="icon-square"></i>
-                  <span className="filter-title">HÃNG GAME</span>
+                  <span className="filter-title">GIÀY TÂY</span>
                 </a>
               </div>
             </div>
             <div className="filter-item">
-              <p className="product-filter-title">KÍCH THƯỚC LÓT CHUỘT</p>
+              <p className="product-filter-title">LOẠI SANDALS</p>
               <div className="product-filter-list">
                 <a href="/">
                   <i className="icon-square"></i>
-                  <span className="filter-title">45x40CM</span>
+                  <span className="filter-title">SANDALS - NAM</span>
                 </a>
                 <a href="/">
                   <i className="icon-square"></i>
-                  <span className="filter-title">90x35CM</span>
+                  <span className="filter-title">SANDALS - NỮ</span>
                 </a>
                 <a href="/">
                   <i className="icon-square"></i>
-                  <span className="filter-title">40x30CM</span>
+                  <span className="filter-title">SANDALS - TRẺ EM</span>
                 </a>
                 <a href="/">
                   <i className="icon-square"></i>
-                  <span className="filter-title">80x30CM</span>
+                  <span className="filter-title">SANDALS - TRẮNG HỌC SINH</span>
                 </a>
                 <a href="/">
                   <i className="icon-square"></i>
-                  <span className="filter-title">26x21CM</span>
+                  <span className="filter-title">SANDALS - HUNTER</span>
+                </a>
+              </div>
+            </div>
+            <div className="filter-item">
+              <p className="product-filter-title">LOẠI DÉP</p>
+              <div className="product-filter-list">
+                <a href="/">
+                  <i className="icon-square"></i>
+                  <span className="filter-title">DÉP NAM - QUAI NGANG</span>
                 </a>
                 <a href="/">
                   <i className="icon-square"></i>
-                  <span className="filter-title">80x40CM</span>
+                  <span className="filter-title">DÉP NAM - QUAI KẸP</span>
                 </a>
                 <a href="/">
                   <i className="icon-square"></i>
-                  <span className="filter-title">35x30CM</span>
+                  <span className="filter-title">DÉP NỮ - QUAI NGANG</span>
                 </a>
                 <a href="/">
                   <i className="icon-square"></i>
-                  <span className="filter-title">90x40CM</span>
+                  <span className="filter-title">DÉP NỮ - QUAI KẸP</span>
+                </a>
+                <a href="/">
+                  <i className="icon-square"></i>
+                  <span className="filter-title">DÉP TRẺ EM - QUAI NGANG</span>
+                </a>
+                <a href="/">
+                  <i className="icon-square"></i>
+                  <span className="filter-title">DÉP TRẺ EM - QUAI KẸP</span>
                 </a>
               </div>
             </div>
           </div>
         </div>
         <div className="col-right">
-          <div className="product-title-group">
-            <h1 className="product-title">LÓT CHUỘT</h1>
-            <span>(7 sản phẩm)</span>
-          </div>
           <div className="product-holder-group">
             <div className="sort-by-group">
               <div className="sort-by-list">
@@ -160,23 +165,6 @@ const Products = () => {
                 <a href="/">Xem nhiều</a>
               </div>
               <div className="d-flex align-items-center justify-content-end">
-                <div className="choose-price-holder">
-                  <input
-                    type="text"
-                    placeholder="Giá thấp nhất"
-                    className="price-range"
-                  />
-                  <span>-</span>
-                  <input
-                    type="text"
-                    placeholder="Giá cao nhất"
-                    className="price-range"
-                  />
-                </div>
-
-                <button type="submit" className="submit-filter">
-                  Tìm
-                </button>
                 <select className="sort-select-item">
                   <option value={0}>Lọc sản phẩm</option>
                   <option value={1}>Còn hàng</option>
@@ -187,10 +175,24 @@ const Products = () => {
               </div>
             </div>
             <div className="product-container">
-              <div className="product-item">
-                <ProductsCard />
-              </div>
+              {loading ? (
+                <SkeletonList length={12} />
+              ) : (
+                <>
+                  {dataProducts.map((item, index) => (
+                    <div key={index} className="product-item">
+                      <ProductsCard data={item} />
+                    </div>
+                  ))}
+                </>
+              )}
             </div>
+            {/* Products Pagination */}
+            <CustomizePagination
+              currentLimit={pagination.limit}
+              totalItem={data.length}
+              currentPage={pagination.page}
+            />
           </div>
         </div>
       </div>

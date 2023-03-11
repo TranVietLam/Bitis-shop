@@ -6,10 +6,9 @@ import { Link, NavLink } from "react-router-dom";
 
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
-import Menu from "./../../components/MenuList/index";
-import NavbarTablet from "./../../components/NavbarTablet/index";
-import { onAddToCart } from "./../../redux/actions/actions";
-import { numberWithCommas } from "./../../Utils/index";
+import NavbarTablet from "../../components/NavbarTablet/index";
+import { onAddToCart } from "../../redux/actions/actions";
+import { numberWithCommas } from "../../Utils/index";
 
 const Header = () => {
   //product render
@@ -135,11 +134,10 @@ const Header = () => {
             </NavLink>
 
             <div className="header-menu-group">
-              <p className="header-menu-title">
-                <i className="bi bi-list-ul icon-list" />
-                Danh Mục
-              </p>
-              <Menu />
+              <Link to="/products" className="header-menu-title">
+                <i className="bi bi-ui-checks-grid"></i>
+                Sản Phẩm
+              </Link>
             </div>
 
             <div className="header-search-group">
@@ -188,7 +186,9 @@ const Header = () => {
                 {/* cart hover */}
                 <div className="header-cart-hover">
                   {dataCart.product.length === 0 && (
-                    <div className="text-center p-4 fw-bold fs-6">Có 0 sản phẩm trong giỏ hàng</div>
+                    <div className="text-center p-4 fw-bold fs-6">
+                      Có 0 sản phẩm trong giỏ hàng
+                    </div>
                   )}
                   {dataCart.product.length > 0 && (
                     <>

@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
 import "./style.css";
-import DataProductSale from "../../../DataProductSale/index";
 import { numberWithCommas } from "../../../Utils";
 
 //redux
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { onAddToCart } from "../../../redux/actions/actions";
 import ModalSuccess from "../../ModalSuccess";
 
@@ -25,11 +24,17 @@ const SaleSlider = () => {
     dispatch(onAddToCart(infoProduct));
     setShow(true);
   };
+
+  const {dataSale} = useSelector((state) => {
+    return {
+      dataSale : state.productsList.products || [],
+    }
+  })
   const settings = {
-    dots: true,
+    dots: false,
     infinite: false,
     speed: 1000,
-    slidesToShow: 4,
+    slidesToShow: 6,
     slidesToScroll: 1,
     initialSlide: 0,
     swipeToSlide: true,
@@ -67,7 +72,7 @@ const SaleSlider = () => {
     <>
       <ModalSuccess show={show} />
       <Slider {...settings}>
-        {DataProductSale.map((item, id) => (
+        {dataSale.map((item, id) => (
           <div key={id}>
             <div className="container">
               <div className="sale-product-card">

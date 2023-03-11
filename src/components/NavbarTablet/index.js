@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./style.css";
 import { useNavigate } from "react-router-dom";
-import ModalMobile from "../ModalMobile";
 
 const NavbarTablet = () => {
   const navbarList = [
@@ -17,7 +16,7 @@ const NavbarTablet = () => {
       icon: "under-nav-icon bi bi-list-ul",
       label: "Danh Mục",
       type: "link",
-      url : "/products"
+      url: "/products",
     },
     {
       id: 3,
@@ -35,10 +34,7 @@ const NavbarTablet = () => {
     },
   ];
   const [indexActive, setActive] = useState(0);
-  const [isShowModal, setIsShowModal] = useState(false);
-  const onCloseModal = () => {
-    setIsShowModal(false);
-  };
+
   const navigate = useNavigate();
   const handleActive = (index, item) => {
     setActive(index);
@@ -46,16 +42,11 @@ const NavbarTablet = () => {
       navigate(item.url);
     } else if (item.type === "phone") {
       window.location.href = item.url;
-    } else if (item.type === "modal") {
-      setIsShowModal(true);
     }
   };
 
   return (
     <>
-      {isShowModal && (
-        <ModalMobile isShow={isShowModal} handleClose={onCloseModal} />
-      )}
       <div className="under-navbar-container">
         <div className="navigation">
           <ul>
