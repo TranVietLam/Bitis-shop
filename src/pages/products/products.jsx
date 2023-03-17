@@ -1,19 +1,39 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./products.css";
-import Breadcrumb from "./../../components/BreadcrumbTitle/index";
+import Breadcrumb from "../../components/BreadcrumbTitle/index";
 import ProductsCard from "../../components/ProductsComponents/ProductsCard";
 import SkeletonList from "../../components/ProductsComponents/SkelektonList/SkeletonList";
-import { useSelector } from "react-redux";
-import CustomizePagination from "./../../components/Pagination/index";
+import { useSelector, useDispatch } from "react-redux";
+import CustomizePagination from "../../components/Pagination/index";
+import {
+  fetchCategory,
+  loadDataCategory,
+} from "../../redux/actions/actionsCategory";
 
 const Products = () => {
-  const { data, pagination } = useSelector((state) => {
+  let { data, pagination, category } = useSelector((state) => {
     return {
       data: state.productsList.products,
       pagination: state.dataPagination,
+      category: state.categoryCode.category,
     };
   });
-  // Limit Pagination
+
+
+  // products filter
+  const [productsFilter, setProductsFilter] = useState({});
+  const handleFilter = (item) => {
+    if (productsFilter.code !== item.code) {
+      setProductsFilter(item)
+    }
+  }
+
+
+  if (productsFilter.code) {
+    data = data.filter((currentValue, index) => {
+      return currentValue.categoryCode === productsFilter.code
+    })
+  }
 
   //pagination
   const dataProducts = [];
@@ -30,13 +50,29 @@ const Products = () => {
     // page 4 : 36 - 47,
   });
 
+
+
   // skeleton loading
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   if (loading === true) {
     setTimeout(() => {
       setLoading(false);
     }, 1000);
   }
+
+  // filter data
+  const dispatch = useDispatch();
+  useEffect(() => {
+    // api
+    fetch("https://5e1fc92ee31c6e0014c6000e.mockapi.io/api/category")
+      .then((response) => response.json())
+      .then((data) => {
+        if (Array.isArray(data) && data.length > 0) {
+          dispatch(fetchCategory(data));
+        }
+      });
+    dispatch(loadDataCategory());
+  }, []);
 
   return (
     <>
@@ -47,110 +83,112 @@ const Products = () => {
             <div className="product-filter-item">
               <p className="product-filter-title">HÃNG SẢN XUẤT</p>
               <div className="product-filter-list">
-                <a href="/">
-                  <i className="icon-square"></i>
-                  <span className="filter-title">BITIS</span>
-                </a>
-                <a href="/">
+                {category.map((item, index) => (
+                  <div key={index} className="product-filter-input">
+                    <input type="checkbox" checked={productsFilter.code === item.code} onChange={() => handleFilter(item)}/>
+                    <span className="filter-title">{item.name}</span>
+                  </div>
+                ))}
+                <button>
                   <i className="icon-square"></i>
                   <span className="filter-title">BITAS</span>
-                </a>
-                <a href="/">
+                </button>
+                <button>
                   <i className="icon-square"></i>
                   <span className="filter-title">THÁI</span>
-                </a>
+                </button>
               </div>
             </div>
             <div className="filter-item">
               <p className="product-filter-title">KHOẢNG GIÁ</p>
               <div className="product-filter-list">
-                <a href="/">
+                <button>
                   <i className="icon-square"></i>
                   <span className="filter-title">Dưới 500 ngàn</span>
-                </a>
-                <a href="/">
+                </button>
+                <button>
                   <i className="icon-square"></i>
                   <span className="filter-title">500 ngàn - 1.000.000</span>
-                </a>
-                <a href="/">
+                </button>
+                <button>
                   <i className="icon-square"></i>
                   <span className="filter-title">Trên 1.000.000</span>
-                </a>
+                </button>
               </div>
             </div>
             <div className="filter-item">
               <p className="product-filter-title">LOẠI GIÀY</p>
               <div className="product-filter-list">
-                <a href="/">
+                <button>
                   <i className="icon-square"></i>
                   <span className="filter-title">GIÀY NAM</span>
-                </a>
-                <a href="/">
+                </button>
+                <button>
                   <i className="icon-square"></i>
                   <span className="filter-title">GIÀY NỮ</span>
-                </a>
-                <a href="/">
+                </button>
+                <button>
                   <i className="icon-square"></i>
                   <span className="filter-title">GIÀY TRẺ EM</span>
-                </a>
-                <a href="/">
+                </button>
+                <button>
                   <i className="icon-square"></i>
                   <span className="filter-title">GIÀY TÂY</span>
-                </a>
+                </button>
               </div>
             </div>
             <div className="filter-item">
               <p className="product-filter-title">LOẠI SANDALS</p>
               <div className="product-filter-list">
-                <a href="/">
+                <button>
                   <i className="icon-square"></i>
                   <span className="filter-title">SANDALS - NAM</span>
-                </a>
-                <a href="/">
+                </button>
+                <button>
                   <i className="icon-square"></i>
                   <span className="filter-title">SANDALS - NỮ</span>
-                </a>
-                <a href="/">
+                </button>
+                <button>
                   <i className="icon-square"></i>
                   <span className="filter-title">SANDALS - TRẺ EM</span>
-                </a>
-                <a href="/">
+                </button>
+                <button>
                   <i className="icon-square"></i>
                   <span className="filter-title">SANDALS - TRẮNG HỌC SINH</span>
-                </a>
-                <a href="/">
+                </button>
+                <button>
                   <i className="icon-square"></i>
                   <span className="filter-title">SANDALS - HUNTER</span>
-                </a>
+                </button>
               </div>
             </div>
             <div className="filter-item">
               <p className="product-filter-title">LOẠI DÉP</p>
               <div className="product-filter-list">
-                <a href="/">
+                <button>
                   <i className="icon-square"></i>
                   <span className="filter-title">DÉP NAM - QUAI NGANG</span>
-                </a>
-                <a href="/">
+                </button>
+                <button>
                   <i className="icon-square"></i>
                   <span className="filter-title">DÉP NAM - QUAI KẸP</span>
-                </a>
-                <a href="/">
+                </button>
+                <button>
                   <i className="icon-square"></i>
                   <span className="filter-title">DÉP NỮ - QUAI NGANG</span>
-                </a>
-                <a href="/">
+                </button>
+                <button>
                   <i className="icon-square"></i>
                   <span className="filter-title">DÉP NỮ - QUAI KẸP</span>
-                </a>
-                <a href="/">
+                </button>
+                <button>
                   <i className="icon-square"></i>
                   <span className="filter-title">DÉP TRẺ EM - QUAI NGANG</span>
-                </a>
-                <a href="/">
+                </button>
+                <button>
                   <i className="icon-square"></i>
                   <span className="filter-title">DÉP TRẺ EM - QUAI KẸP</span>
-                </a>
+                </button>
               </div>
             </div>
           </div>
@@ -192,6 +230,7 @@ const Products = () => {
               currentLimit={pagination.limit}
               totalItem={data.length}
               currentPage={pagination.page}
+              isScrollToTop={true}
             />
           </div>
         </div>

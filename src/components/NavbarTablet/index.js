@@ -13,8 +13,8 @@ const NavbarTablet = () => {
     },
     {
       id: 2,
-      icon: "under-nav-icon bi bi-list-ul",
-      label: "Danh Mục",
+      icon: "under-nav-icon bi bi-ui-checks-grid",
+      label: "Sản Phẩm",
       type: "link",
       url: "/products",
     },

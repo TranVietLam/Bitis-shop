@@ -39,7 +39,7 @@ const SaleSlider = () => {
     initialSlide: 0,
     swipeToSlide: true,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 3000,
     lazyLoad: true,
     responsive: [
       {
@@ -48,7 +48,7 @@ const SaleSlider = () => {
           slidesToShow: 3,
           slidesToScroll: 3,
           infinite: true,
-          dots: true,
+          dots: false,
         },
       },
       {

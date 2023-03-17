@@ -7,10 +7,7 @@ import BannerRight1 from "../../Assets/images/banner/Banner-right1.png";
 import BannerRight2 from "../../Assets/images/banner/Banner-right2.png";
 import BannerRight3 from "../../Assets/images/banner/Banner-right3.png";
 
-// Banner Under
-import BannerUnder1 from "../../Assets/images/banner/Banner-under1.png";
-import BannerUnder2 from "../../Assets/images/banner/Banner-under2.png";
-import BannerUnder3 from "../../Assets/images/banner/Banner-under3.png";
+
 import MenuListHomePage from "./../MenuListHomePage/index";
 
 const BannerHomePage = () => {
@@ -93,32 +90,6 @@ const BannerHomePage = () => {
                 <img src={BannerRight3} alt="Banner-Right" />
               </a>
             </div>
-          </div>
-          <div className="home-under-group">
-            <a
-              href="/"
-              className="home-under-item"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src={BannerUnder1} alt="Banner-Right" />
-            </a>
-            <a
-              href="/"
-              className="home-under-item"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src={BannerUnder2} alt="Banner-Right" />
-            </a>
-            <a
-              href="/"
-              className="home-under-item"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src={BannerUnder3} alt="Banner-Right" />
-            </a>
           </div>
         </div>
       </div>

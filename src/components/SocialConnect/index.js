@@ -5,7 +5,7 @@ const SocialConnect = () => {
     //scroll to open
     const [social, setSocial] = useState(false)
     const changeSocial = () => {
-        if (window.scrollY >= 200) {
+        if (window.scrollY >= 700) {
             setSocial(true);
           } else {
             setSocial(false);

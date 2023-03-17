@@ -1,11 +1,10 @@
 
-
 .banner-img {
-    height: auto;
+    height: 100%;
 }
 
-@media (min-width: 769px) and (max-width: 1025px) { 
+@media (min-width: 769px) and (max-width: 1024px) { 
     .banner-img {
-        height: 464px;
+        height: 372px;
     }
 }

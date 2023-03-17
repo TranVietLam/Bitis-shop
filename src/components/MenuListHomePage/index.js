@@ -7,47 +7,27 @@ const MenuListHomePage = () => {
       <div className="homepage-menu-list">
         <div className="homepage-list-item">
           <i className="cat-thum lot-chuot"></i>
-          LÓT CHUỘT
+          BITIS HUNTER
         </div>
         <div className="homepage-list-item">
           <i className="cat-thum gaming-gear"></i>
-          GAMING GEAR
+          BITAS
         </div>
         <div className="homepage-list-item">
           <i className="cat-thum phu-kien"></i>
-          PHỤ KIỆN MÁY TÍNH
+          GIÀY
         </div>
         <div className="homepage-list-item">
           <i className="cat-thum mo-hinh"></i>
-          MÔ HÌNH
+          DÉP
         </div>
         <div className="homepage-list-item">
           <i className="cat-thum trang-tri"></i>
-          PHỤ KIỆN TRANG TRÍ
+          SANDALS
         </div>
         <div className="homepage-list-item">
           <i className="cat-thum loa-micro"></i>
-          LOA, MICRO, WEBCAM
-        </div>
-        <div className="homepage-list-item">
-          <i className="cat-thum ghe-gaming"></i>
-          GHẾ GAMING
-        </div>
-        <div className="homepage-list-item">
-          <i className="cat-thum ban-gaming"></i>
-          BÀN GAMING
-        </div>
-        <div className="homepage-list-item">
-          <i className="cat-thum usb"></i>
-          USB,BỘ CHIA TÍN HIỆU
-        </div>
-        <div className="homepage-list-item">
-          <i className="cat-thum tan-nhiet"></i>
-          TẢN NHIỆT,COOLING
-        </div>
-        <div className="homepage-list-item">
-          <i className="cat-thum phu-kien"></i>
-          PHỤ KIỆN ĐIỆN THOẠI
+          CAO GÓT
         </div>
       </div>
     </>

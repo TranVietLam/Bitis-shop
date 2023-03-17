@@ -16,6 +16,7 @@ const Header = () => {
     return { dataCart: state.cartStore };
   });
 
+
   const dispatch = useDispatch();
   const onChangeQuantity = (e, item) => {
     item.quantity = e.target.value;
@@ -141,7 +142,7 @@ const Header = () => {
             </div>
 
             <div className="header-search-group">
-              <form
+              <div
                 method="get"
                 action="/tim"
                 name="search"
@@ -154,7 +155,7 @@ const Header = () => {
                   autoComplete="off"
                   className="text-search"
                 />
-              </form>
+              </div>
             </div>
 
             <div className="header-right-group">

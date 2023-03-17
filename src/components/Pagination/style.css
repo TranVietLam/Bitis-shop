@@ -1,3 +1,7 @@
 .limit-pagination {
-    border: 1px solid #000;
+    background-color: #FFFBF5;
+    border: 1px solid #ff7d00;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
 }

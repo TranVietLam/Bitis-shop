@@ -76,7 +76,7 @@
 
 .product-img {
   width: 100%;
-  min-height: 190px;
+  min-height: 265px;
   position: relative;
 }
 
@@ -108,13 +108,13 @@
   cursor: pointer;
 }
 
-.product-price {
+.product-price-sale {
   font-size: 14px;
   text-decoration: line-through;
   color: var(--primary-color);
 }
 
-.product-price-sale {
+.product-price {
   font-size: 24px;
   color: var(--secondary-color);
   font-weight: 500;

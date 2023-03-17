@@ -1,5 +1,6 @@
 .homepage-menu-list {
-  height: 100%;
+  width: 275px;
+  height: 98%;
   background: #fff;
   border-radius: 20px;
   box-shadow: 0 0 6px 0 rgb(0 0 0 / 15%);
@@ -21,7 +22,7 @@
   }
 
 .homepage-list-item {
-  height: calc(100% / 11);
+  height: calc(100% / 6);
   padding: 0 14px;
   display: flex;
   align-items: center;
@@ -80,4 +81,19 @@
 
 .phu-kien {
   background-image: url(../../Assets/images/icon-img/phukien-dienthoai.png);
+}
+
+/* Laptop Small Screen */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .homepage-menu-list {
+    width: 200px;
+    height: 372px;
+  }
+}
+
+/* laptop Large Screen */
+@media (min-width: 1024px) and (max-width: 1441px) {
+  .homepage-menu-list {
+    width: 300px;
+  }
 }

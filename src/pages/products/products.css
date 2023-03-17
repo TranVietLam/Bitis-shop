@@ -28,7 +28,13 @@
   text-transform: uppercase;
 }
 
-.product-filter-container a {
+.product-filter-input {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.product-filter-container input {
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -38,11 +44,11 @@
   color: #000;
 }
 
-.product-filter-container a:hover {
+.product-filter-container input:hover {
   color: #ff7d00;
 }
 
-.product-page .icon-square {
+.product-page input {
   background: #f4f4f4;
   width: 16px;
   height: 16px;
@@ -50,7 +56,7 @@
   margin-right: 14px;
 }
 
-.product-page .icon-square.active {
+.product-page input.active {
   color: #ff7d00;
 }
 
@@ -175,12 +181,29 @@
 /* pagition css */
 .page-link {
   color: #ff7d00 !important;
-  border: 1px solid #000 !important;
+  border: 1px solid #ff7d00 !important;
+}
+
+.page-item:first-child .page-link {
+  border-radius: 50%;
+  border-top-left-radius: 50% !important;
+  border-bottom-left-radius: 50% !important;
+}
+
+.page-item:not(:first-child) .page-link {
+  margin-left: 0 !important;
+  border-radius: 50%;
+  border-top-left-radius: 50% !important;
+  border-bottom-left-radius: 50% !important;
+}
+
+.page-item {
+  margin-right: 10px;
 }
 
 .page-link.active, .active > .page-link {
   background-color: #000 !important;
-  border-color: #000 !important ;
+  border-color: #ff7d00 !important ;
 }
 
 /* Mobile */
